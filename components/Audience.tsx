@@ -41,8 +41,12 @@ export default function Audience() {
           <div key={index} className="flex items-center group">
             {/* CONTAINER DO ÍCONE COM SETA SOBREPOSTA */}
             <div className="relative min-w-[150px] h-[150px]">
-              <div className="w-[150px] h-[150px] bg-[#6767F1] flex items-center justify-center shadow-lg">
-                <img src={benefit.icon} alt="" className="w-2/3 h-2/3 object-contain" />
+              <div className="w-[150px] h-[150px] bg-[#6767F1] flex items-center justify-center shadow-lg p-8">
+                <img 
+                  src={benefit.icon} 
+                  alt="" 
+                  className={`w-full h-full object-contain ${benefit.title.includes("Alinhar") ? "scale-125" : "scale-100"}`} 
+                />
               </div>
 
               {/* SETA ROSA: POSICIONADA EXATAMENTE NA BORDA DIREITA */}

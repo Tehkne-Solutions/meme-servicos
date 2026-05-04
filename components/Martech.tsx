@@ -1,28 +1,45 @@
-"use client";
+import React from 'react';
 
-export default function MartechSection() {
+const MartechSection = () => {
+  const specialties = [
+    "Planejamento & Personas",
+    "Análise de Branding",
+    "E-commerce & Landing Pages",
+    "Design UX/UI",
+    "Copywriting",
+    "SEO Avançado",
+    "Tráfego Pago",
+    "Criativos Display",
+    "Gestão de Conteúdo",
+    "Produção de Fotos & Vídeos",
+    "Automações, AI & BI",
+    "CRM Marketing",
+    "Dashboards & Relatórios",
+    "Ciclo Contínuo de Marketing"
+  ];
+
   return (
-    <section className="bg-secondary min-h-[738px] flex items-center py-20 text-white font-inter">
-      <div className="max-w-[1276px] mx-auto px-4 text-center">
-        <h2 className="text-[50px] leading-[61px] font-bold lowercase mb-8">
-          Agência Martech
+    <section className="w-full bg-[#6C5CE7] py-24 font-['Plus_Jakarta_Sans'] text-white">
+      <div className="max-w-[1200px] mx-auto text-center px-4">
+        <h2 className="text-[50px] font-bold uppercase leading-tight mb-6">
+          o que uma agência <span className="font-light opacity-70">MARTECH</span> pode fazer por você
         </h2>
-        <p className="font-jakarta text-[20px] leading-[26px] tracking-[0.5px] max-w-[1154px] mx-auto opacity-90">
-          In oculis quidem se... [Texto do Figma]
+        <p className="text-[18px] opacity-80 max-w-[900px] mx-auto mb-20 leading-relaxed">
+          Nossa equipe é especialista em transformação digital, atuando em growth, branding, design, UX/UI, AR/VR, SEO, tráfego pago, e-commerce, CRM, automações e muito mais.
         </p>
 
-        {/* Grid de Ícones/Serviços conforme o Group 427320434 do CSS */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mt-20">
-          {["Web Development", "Web Design", "User Interface Design", "Graphic Design"].map((service, i) => (
-            <div key={i} className="flex flex-col items-center gap-4">
-              <div className="w-[60px] h-[60px] bg-white/10 rounded-sm flex items-center justify-center">
-                {/* Ícone aqui */}
-              </div>
-              <span className="font-jakarta font-bold text-[21px] leading-[20px]">{service}</span>
+        {/* Grid de Especialidades */}
+        <div className="grid grid-cols-5 gap-y-12 gap-x-8 text-left">
+          {specialties.map((item, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <span className="text-[24px] leading-none flex-shrink-0">→</span>
+              <span className="text-[16px] font-semibold leading-tight">{item}</span>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default MartechSection;

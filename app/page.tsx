@@ -20,8 +20,8 @@ export default function Home() {
       <Audience />
       <Timeline30Days />
       <Deliverables />
-      <Method />
       <FAQ />
+      <Method />
       <MartechSection />
       <LeadsProcess />
       <Differentials />

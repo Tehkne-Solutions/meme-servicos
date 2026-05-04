@@ -1,45 +1,55 @@
-"use client";
+import React from 'react';
 
-const steps = [
-  "Atração",
-  "Engajamento",
-  "Venda",
-];
-
-export default function Method() {
+const Method = () => {
   return (
-    <section className="py-section bg-white">
-      <div className="container-custom">
-        <div className="flex flex-col gap-6 items-start">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <h2 className="text-h2 font-bold text-dark">Método Meme7</h2>
-            <span className="bg-secondary text-white px-5 py-3 rounded-card text-small font-semibold">
-              Fale com um especialista agora
-            </span>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`p-8 rounded-card shadow-card ${
-                  index === 1 ? "bg-primary text-white" : "bg-white text-dark"
-                }`}
-              >
-                <div className="text-5xl font-bold mb-4">{index + 1}</div>
-                <h3 className="text-h3 font-bold mb-3">{step}</h3>
-                <p className="text-body leading-relaxed opacity-90">
-                  {step === "Atração" &&
-                    "Atraia interesse com uma proposta clara, comunicação estratégica e posicionamento de mercado."}
-                  {step === "Engajamento" &&
-                    "Converta visitantes em leads com conteúdo relevante, ofertas claras e jornada otimizada."}
-                  {step === "Venda" &&
-                    "Transforme a conversa em resultado com processo de venda estruturado e oferta de valor."}
-                </p>
-              </div>
-            ))}
-          </div>
+    <section className="relative w-[1310px] h-[777px] mx-auto bg-[#EEEEEE] overflow-hidden font-['Plus_Jakarta_Sans']">
+      {/* Cabeçalho da Seção */}
+      <div className="absolute left-[145px] top-[71px]">
+        <h2 className="text-[64px] font-bold text-[#1D1D1D] leading-[81px]">Método Meme7</h2>
+        <p className="text-[18px] text-[#1D1D1D]/80 mt-2 w-[457px]">
+          Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
+        </p>
+      </div>
+
+      {/* Botão Premium */}
+      <a 
+        href="#contato" 
+        className="btn-premium absolute left-[869px] top-[93px] w-[415px] h-[57px] bg-[#6C5CE7] flex items-center justify-center text-white text-[20px] uppercase transition-transform font-semibold"
+      >
+        Fale com um especialista agora
+      </a>
+
+      {/* Container de Cards */}
+      <div className="absolute top-[280px] left-[145px] flex gap-[36px]">
+        {/* Card 1 */}
+        <div className="w-[361px] h-[415px] bg-white p-[36px] relative flex flex-col justify-end">
+          <span className="absolute top-[15px] left-[36px] text-[150px] font-bold text-[#1D1D1D] leading-none">1</span>
+          <h3 className="text-[35px] text-[#1D1D1D] mb-4">Atração</h3>
+          <p className="text-[20px] leading-[30px] text-[#1D1D1D]/80">
+            Atrair o público-alvo com planejamento estratégico, branding, campanhas de marketing e SEO.
+          </p>
+        </div>
+
+        {/* Card 2 - Destaque Rosa */}
+        <div className="w-[359px] h-[415px] bg-[#FF1E5B] p-[36px] relative flex flex-col justify-end">
+          <span className="absolute top-[15px] left-[25px] text-[150px] font-bold text-white leading-none">2</span>
+          <h3 className="text-[30px] text-white mb-4">Engajamento</h3>
+          <p className="text-[20px] leading-[30px] text-white/80">
+            Envolver o público oferecendo conteúdo valioso, construindo confiança por meio de UX otimizado.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div className="w-[361px] h-[415px] bg-white p-[36px] relative flex flex-col justify-end">
+          <span className="absolute top-[10px] left-[42px] text-[150px] font-bold text-[#1D1D1D] leading-none">3</span>
+          <h3 className="text-[35px] text-[#1D1D1D] mb-4">Venda</h3>
+          <p className="text-[20px] leading-[30px] text-[#1D1D1D]/80">
+            Converter engajamento em vendas com estratégias eficazes de tráfego pago, CRM e automações.
+          </p>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Method;

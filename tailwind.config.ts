@@ -1,44 +1,27 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#FF2D55",
-        secondary: "#5B5BFF",
-        dark: "#1E1E1E",
-        gray: "#6B6B6B",
-        "gray-light": "#F2F2F2",
-        white: "#FFFFFF",
-        green: "#7ED321",
+        primary: "#FF1E5B",    // O rosa/vermelho do Strategic Map e bordas
+        secondary: "#6767F1",  // O roxo da seção Martech e Form
+        dark: "#1A1A1A",       // O preto dos títulos de leads
+        success: "#80D509",    // O verde do botão de proposta
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        jakarta: ["Plus Jakarta Sans", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
       fontSize: {
-        hero: ["46px", { lineHeight: "54px", letterSpacing: "-0.5px" }],
-        h2: ["32px", { lineHeight: "38px" }],
-        h3: ["20px", { lineHeight: "26px" }],
-        body: ["16px", { lineHeight: "24px" }],
-        small: ["14px", { lineHeight: "20px" }],
-      },
-      spacing: {
-        section: "96px",
-        "section-sm": "48px",
-      },
-      borderRadius: {
-        card: "8px",
-      },
-      boxShadow: {
-        card: "0px 4px 20px rgba(0, 0, 0, 0.05)",
-      },
+        'figma-h1': ['50px', { lineHeight: '61px', fontWeight: '700' }],
+        'figma-h2': ['30px', { lineHeight: '38px', fontWeight: '700' }],
+        'figma-body': ['20px', { lineHeight: '30px' }],
+      }
     },
   },
   plugins: [],
 };
-
 export default config;

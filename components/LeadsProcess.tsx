@@ -1,45 +1,46 @@
 "use client";
 
+import Container from "./ui/Container";
+
 export default function LeadsProcess() {
   return (
-    <section className="py-section bg-white">
-      <div className="container-custom">
-        <div className="grid grid-cols-12 gap-8 items-center">
-          <div className="col-span-12 md:col-span-6">
-            <h2 className="text-h2 font-bold text-dark">Processo de Aquisição de Leads + Funil de Vendas</h2>
-            <p className="text-body text-gray mt-4 max-w-[520px]">
-              Atinja suas metas com um fluxo claro: aquisição, qualificação e fechamento consistentes.
+    <section className="py-[96px] bg-white font-jakarta">
+      <Container>
+        <div className="grid grid-cols-12 gap-8 items-start">
+
+          {/* Lado Esquerdo: Fluxograma de Processos */}
+          <div className="col-span-12 md:col-span-7 grid grid-cols-2 gap-4">
+            {[
+              "Planejamento estratégico",
+              "Criação de landing pages",
+              "Tráfego pago segmentado",
+              "Integração com CRM",
+              "Nutrição automatizada"
+            ].map((text, i) => (
+              <div
+                key={i}
+                className="border-2 border-primary p-6 h-[97px] flex items-center justify-center text-center text-primary font-poppins font-medium text-[21px]"
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+
+          {/* Lado Direito: Texto e CTA */}
+          <div className="col-span-12 md:col-span-5 text-right flex flex-col items-end">
+            <h2 className="text-dark text-[50px] leading-[63px] font-bold mb-6">
+              Processo de Aquisição de Leads + Funil de Vendas
+            </h2>
+            <p className="text-[20px] leading-[30px] text-black/80 mb-8 max-w-[345px]">
+              Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
             </p>
-            <div className="mt-10 space-y-4">
-              <div className="flex items-center gap-4">
-                <div className="w-11 h-11 bg-primary rounded-full flex items-center justify-center text-white font-bold">1</div>
-                <p className="font-semibold">Geração de tráfego qualificado</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-11 h-11 bg-secondary rounded-full flex items-center justify-center text-white font-bold">2</div>
-                <p className="font-semibold">Nutrição e qualificação de leads</p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-11 h-11 bg-green rounded-full flex items-center justify-center text-dark font-bold">3</div>
-                <p className="font-semibold">Conversão com funil sólido</p>
-              </div>
-            </div>
+            <button className="bg-success hover:brightness-105 transition-all text-white w-[376px] h-[70px] uppercase font-semibold text-[20px]">
+              Solicitar proposta
+            </button>
           </div>
-          <div className="col-span-12 md:col-span-6">
-            <div className="bg-gray-light rounded-card p-8 shadow-card">
-              <h3 className="text-h3 font-bold mb-4">Solicite proposta</h3>
-              <form className="space-y-4">
-                <input className="input" placeholder="Nome completo" />
-                <input className="input" placeholder="Email" />
-                <input className="input" placeholder="Telefone" />
-                <button className="w-full bg-primary text-white py-3 rounded-card font-semibold hover:opacity-90 transition">
-                  SOLICITAR PROPOSTA
-                </button>
-              </form>
-            </div>
-          </div>
+
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

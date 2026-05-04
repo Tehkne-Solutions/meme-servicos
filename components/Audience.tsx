@@ -1,52 +1,76 @@
 "use client";
 
-const items = [
+const benefits = [
   {
+    icon: "/images/meme-digital-para-quem-e-icone-crescer-com-estrutura.png",
     title: "Crescem sem estrutura",
-    desc: "Sua empresa cresce, mas sem previsibilidade",
   },
   {
+    icon: "/images/meme-digital-para-quem-e-icone-alinhar-marketing-vendas-e-operacao.png",
     title: "Atuam no improviso",
-    desc: "Sem plano claro de marketing",
   },
   {
+    icon: "/images/meme-digital-para-quem-e-icone-melhorar-a-performance-comercial.png",
     title: "Melhorar performance comercial",
-    desc: "Querem aumentar conversão e vendas",
   },
   {
+    icon: "/images/meme-digital-para-quem-e-icone-ter-um-plano-claro-de-execucao.png",
     title: "Sem plano de execução",
-    desc: "Não sabem o próximo passo",
   },
 ];
 
 export default function Audience() {
   return (
-    <section className="py-section bg-white">
-      <div className="container-custom">
-        <div className="grid grid-cols-12 gap-8 items-start">
-          <div className="col-span-12 md:col-span-5">
-            <h2 className="text-h2 font-bold text-dark">Para quem é?</h2>
-            <p className="text-body text-gray mt-4">
-              Para empresas que querem crescer com estratégia, previsibilidade e um plano claro.
+    <section className="py-16 md:py-24 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          {/* Coluna Esquerda - Texto e CTA */}
+          <div className="max-w-lg">
+            <h2 className="text-[50px] font-bold text-[#1A1A1A] font-jakarta leading-tight">
+              Para quem é?
+            </h2>
+            <p className="text-[22px] font-normal text-[#1A1A1A] font-jakarta leading-[32px] mt-6 max-w-[342px]">
+              Para empresas que faturam a partir de R$ 70 mil/mês e querem:
             </p>
-            <button className="mt-6 bg-primary text-white px-8 py-3 rounded-card font-semibold hover:opacity-90 transition">
-              FAZ SENTIDO PRA MIM
+            <button className="mt-8 bg-[#FF1E5B] text-white px-10 py-6 rounded-lg font-semibold uppercase text-base hover:brightness-95 transition">
+              Falar com um especialista
             </button>
           </div>
-          <div className="col-span-12 md:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {items.map((item, index) => (
-                <div key={index} className="bg-gray-light p-5 rounded-card flex gap-4 items-start">
-                  <div className="w-10 h-10 bg-secondary rounded-card flex items-center justify-center text-white font-bold">
-                    {index + 1}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-dark">{item.title}</h3>
-                    <p className="text-small text-gray mt-2">{item.desc}</p>
+
+          {/* Coluna Direita - Grid de Benefícios */}
+          <div className="grid grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="relative">
+                {/* Ícone com fundo azul */}
+                <div className="w-[150px] h-[150px] bg-[#6767F1] rounded-lg flex items-center justify-center relative">
+                  <img
+                    src={benefit.icon}
+                    alt={benefit.title}
+                    className="w-16 h-16 object-contain"
+                  />
+                  {/* Sinalizador rosa com seta */}
+                  <div className="absolute bottom-0 right-0 w-[60px] h-[60px] bg-[#FF1E5B] rounded-lg flex items-center justify-center">
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
                   </div>
                 </div>
-              ))}
-            </div>
+                {/* Texto do benefício */}
+                <p className="text-[25px] font-semibold text-[#1A1A1A] font-jakarta leading-[32px] tracking-[-0.03em] mt-4">
+                  {benefit.title}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

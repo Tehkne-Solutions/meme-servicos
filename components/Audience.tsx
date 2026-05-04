@@ -3,76 +3,64 @@
 const benefits = [
   {
     icon: "/images/meme-digital-para-quem-e-icone-crescer-com-estrutura.png",
-    title: "Crescem sem estrutura",
+    title: "Crescer com estrutura",
   },
   {
     icon: "/images/meme-digital-para-quem-e-icone-alinhar-marketing-vendas-e-operacao.png",
-    title: "Atuam no improviso",
+    title: "Alinhar marketing, vendas e operação",
   },
   {
     icon: "/images/meme-digital-para-quem-e-icone-melhorar-a-performance-comercial.png",
-    title: "Melhorar performance comercial",
+    title: "Melhorar a performance comercial",
   },
   {
     icon: "/images/meme-digital-para-quem-e-icone-ter-um-plano-claro-de-execucao.png",
-    title: "Sem plano de execução",
+    title: "Ter um plano claro de execução",
   },
 ];
 
 export default function Audience() {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
-          {/* Coluna Esquerda - Texto e CTA */}
-          <div className="max-w-lg">
-            <h2 className="text-[50px] font-bold text-[#1A1A1A] font-jakarta leading-tight">
-              Para quem é?
-            </h2>
-            <p className="text-[22px] font-normal text-[#1A1A1A] font-jakarta leading-[32px] mt-6 max-w-[342px]">
-              Para empresas que faturam a partir de R$ 70 mil/mês e querem:
-            </p>
-            <button className="mt-8 bg-[#FF1E5B] text-white px-10 py-6 rounded-lg font-semibold uppercase text-base hover:brightness-95 transition">
-              Falar com um especialista
-            </button>
-          </div>
+    <section className="max-w-[1283px] mx-auto py-20 px-4 flex flex-col lg:flex-row gap-16 items-start">
+      {/* COLUNA ESQUERDA: COPY E CTA */}
+      <div className="flex-1 max-w-[342px]">
+        <h2 className="text-[50px] font-bold leading-[63px] text-[#1A1A1A] mb-6">
+          Para quem é?
+        </h2>
+        <p className="text-[22px] leading-[32px] text-[#1A1A1A] mb-10 tracking-[-0.01em]">
+          Para empresas que faturam a partir de R$ 70 mil/mês e querem:
+        </p>
+        <button className="w-full h-[70px] bg-[#FF1E5B] text-white text-[16px] font-semibold uppercase tracking-wider hover:brightness-110 transition-all">
+          Falar com um Especialista
+        </button>
+      </div>
 
-          {/* Coluna Direita - Grid de Benefícios */}
-          <div className="grid grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="relative">
-                {/* Ícone com fundo azul */}
-                <div className="w-[150px] h-[150px] bg-[#6767F1] rounded-lg flex items-center justify-center relative">
-                  <img
-                    src={benefit.icon}
-                    alt={benefit.title}
-                    className="w-16 h-16 object-contain"
-                  />
-                  {/* Sinalizador rosa com seta */}
-                  <div className="absolute bottom-0 right-0 w-[60px] h-[60px] bg-[#FF1E5B] rounded-lg flex items-center justify-center">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                {/* Texto do benefício */}
-                <p className="text-[25px] font-semibold text-[#1A1A1A] font-jakarta leading-[32px] tracking-[-0.03em] mt-4">
-                  {benefit.title}
-                </p>
+      {/* COLUNA DIREITA: GRID DE BENEFÍCIOS */}
+      <div className="flex-[2] grid grid-cols-1 md:grid-cols-2 gap-x-32 gap-y-12">
+        {benefits.map((benefit, index) => (
+          <div key={index} className="flex items-center group">
+            {/* CONTAINER DO ÍCONE COM SETA SOBREPOSTA */}
+            <div className="relative min-w-[150px] h-[150px]">
+              <div className="w-[150px] h-[150px] bg-[#6767F1] flex items-center justify-center shadow-lg">
+                <img src={benefit.icon} alt="" className="w-2/3 h-2/3 object-contain" />
               </div>
-            ))}
+
+              {/* SETA ROSA: POSICIONADA EXATAMENTE NA BORDA DIREITA */}
+              <div className="absolute top-1/2 -translate-y-1/2 -right-8 w-[60px] h-[60px] bg-[#FF1E5B] flex items-center justify-center shadow-md">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </div>
+            </div>
+
+            {/* TEXTO DO BENEFÍCIO (ALINHADO À DIREITA DA SETA) */}
+            <div className="ml-14">
+              <span className="text-[25px] font-semibold leading-[32px] text-[#1A1A1A] tracking-[-0.03em] block max-w-[250px]">
+                {benefit.title}
+              </span>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

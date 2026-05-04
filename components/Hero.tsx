@@ -2,30 +2,45 @@
 
 export default function Hero() {
   return (
-    <section className="bg-gray-light py-section">
-      <div className="container-custom">
-        <div className="grid grid-cols-12 gap-8 items-center">
-          <div className="col-span-12 md:col-span-6">
-            <h1 className="text-hero font-bold text-dark">
+    <section className="bg-gray-light py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Texto à esquerda */}
+          <div className="flex-1 text-center lg:text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-dark leading-tight">
               JÁ FATURA <span className="text-secondary">R$70 MIL/MÊS?</span>
               <br />
               ENTÃO NÃO FAZ SENTIDO SUA EMPRESA SEGUIR NO IMPROVISO.
             </h1>
-            <p className="mt-6 text-body text-gray max-w-[480px]">
+            <p className="mt-6 text-lg md:text-xl text-gray max-w-[480px] mx-auto lg:mx-0">
               Garanta seu Mapa Estratégico de Marketing e saiba exatamente onde focar para crescer em 2026.
             </p>
-            <button className="mt-8 bg-primary text-white px-8 py-3 rounded-card font-semibold hover:opacity-90 transition">
+            <button className="mt-8 bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:opacity-90 transition">
               QUERO MEU MAPA
             </button>
           </div>
-          <div className="col-span-12 md:col-span-6 flex justify-end">
-            <div className="bg-secondary text-white p-6 w-full max-w-[360px] rounded-card shadow-card">
+
+          {/* Formulário à direita */}
+          <div className="flex-1 flex justify-center lg:justify-end">
+            <div className="bg-white p-8 w-full max-w-[400px] rounded-xl shadow-xl">
               <form className="flex flex-col gap-4">
-                <input className="input bg-white/10 border-white/20 text-white placeholder-white/70" placeholder="Nome" />
-                <input className="input bg-white/10 border-white/20 text-white placeholder-white/70" placeholder="Empresa" />
-                <input className="input bg-white/10 border-white/20 text-white placeholder-white/70" placeholder="Email" />
-                <input className="input bg-white/10 border-white/20 text-white placeholder-white/70" placeholder="Telefone" />
-                <button className="bg-green text-dark py-3 rounded-card font-semibold hover:opacity-90 transition">
+                <input
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Nome"
+                />
+                <input
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Empresa"
+                />
+                <input
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Email"
+                />
+                <input
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder="Telefone"
+                />
+                <button className="w-full bg-success text-white py-3 rounded-lg font-semibold hover:brightness-105 transition">
                   GARANTIR MEU MAPA
                 </button>
               </form>

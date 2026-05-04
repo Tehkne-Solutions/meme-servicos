@@ -48,9 +48,10 @@ const Deliverables = () => {
         </div>
 
         {/* Coluna 3: Box com Borda Preta "Valor dos Entregáveis" */}
-        {/* Offset Esquerda: 902px - 110px = 792px | Offset Topo: 3182px - 3132px = 50px */}
-        <div className="absolute left-[792px] top-[50px] w-[378px] h-[480px] border-[4px] border-[#1D1D1D] bg-transparent flex items-center justify-center">
-          <h2 className="text-white text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-center w-[273px]">
+        {/* Offset Esquerda: 792px | Offset Topo: 50px */}
+        <div className="absolute left-[792px] top-[50px] w-[378px] h-[480px] border-[4px] border-[#1D1D1D] bg-transparent">
+          {/* Texto alinhado à esquerda e posicionado 121px do topo da borda preta (centralizando com a azul) */}
+          <h2 className="absolute top-[121px] left-[52px] text-white text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-left w-[273px]">
             Valor dos Entregáveis
           </h2>
         </div>

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const Secao30Dias = () => {
   // Estado para controlar qual card está com hover
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const etapas = [
     { id: "1", sub: "Onboarding Técnico", itens: ["Mapeamento completo", "Coleta de dados", "Alinhamento de metas"] },

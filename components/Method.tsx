@@ -1,6 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Method = () => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const memeCards = [
+    {
+      id: 1,
+      title: 'Atração',
+      text: 'Atrair o público-alvo com planejamento estratégico, branding, campanhas de marketing, landing pages otimizadas, conteúdo criativo, tráfego pago e SEO.',
+    },
+    {
+      id: 2,
+      title: 'Engajamento',
+      text: 'Envolver o público oferecendo conteúdo valioso, construindo confiança por meio de UX otimizado e tornando a marca uma referência apaixonante.',
+    },
+    {
+      id: 3,
+      title: 'Venda',
+      text: 'Converter engajamento em vendas com estratégias eficazes de tráfego pago, landing pages, CRM, automações e integração com a equipe comercial.',
+    },
+  ];
+
   return (
     <section className="relative w-[1310px] h-[777px] mx-auto bg-[#EEEEEE] overflow-hidden font-['Plus_Jakarta_Sans']">
       {/* Cabeçalho da Seção */}
@@ -12,41 +32,51 @@ const Method = () => {
       </div>
 
       {/* Botão Premium */}
-      <a 
-        href="#contato" 
+      <a
+        href="#contato"
         className="btn-premium absolute left-[869px] top-[93px] w-[415px] h-[57px] bg-[#6C5CE7] flex items-center justify-center text-white text-[20px] uppercase transition-transform font-semibold"
       >
         Fale com um especialista agora
       </a>
 
       {/* Container de Cards */}
-      <div className="absolute top-[280px] left-[145px] flex gap-[36px]">
-        {/* Card 1 */}
-        <div className="w-[361px] h-[415px] bg-white p-[36px] relative flex flex-col justify-end">
-          <span className="absolute top-[15px] left-[36px] text-[150px] font-bold text-[#1D1D1D] leading-none">1</span>
-          <h3 className="text-[35px] text-[#1D1D1D] mb-4">Atração</h3>
-          <p className="text-[20px] leading-[30px] text-[#1D1D1D]/80">
-            Atrair o público-alvo com planejamento estratégico, branding, campanhas de marketing e SEO.
-          </p>
-        </div>
+      <div className="absolute top-[280px] left-[145px] grid grid-cols-3 gap-[36px]">
+        {memeCards.map((card) => {
+          const isHovered = hoveredCard === card.id;
 
-        {/* Card 2 - Destaque Rosa */}
-        <div className="w-[359px] h-[415px] bg-[#FF1E5B] p-[36px] relative flex flex-col justify-end">
-          <span className="absolute top-[15px] left-[25px] text-[150px] font-bold text-white leading-none">2</span>
-          <h3 className="text-[30px] text-white mb-4">Engajamento</h3>
-          <p className="text-[20px] leading-[30px] text-white/80">
-            Envolver o público oferecendo conteúdo valioso, construindo confiança por meio de UX otimizado.
-          </p>
-        </div>
-
-        {/* Card 3 */}
-        <div className="w-[361px] h-[415px] bg-white p-[36px] relative flex flex-col justify-end">
-          <span className="absolute top-[10px] left-[42px] text-[150px] font-bold text-[#1D1D1D] leading-none">3</span>
-          <h3 className="text-[35px] text-[#1D1D1D] mb-4">Venda</h3>
-          <p className="text-[20px] leading-[30px] text-[#1D1D1D]/80">
-            Converter engajamento em vendas com estratégias eficazes de tráfego pago, CRM e automações.
-          </p>
-        </div>
+          return (
+            <div
+              key={card.id}
+              onMouseEnter={() => setHoveredCard(card.id)}
+              onMouseLeave={() => setHoveredCard(null)}
+              className={`transition-all duration-500 p-[36px] h-[415px] relative flex flex-col justify-end cursor-default ${
+                isHovered ? 'bg-[#FF1E5B] scale-105 shadow-2xl' : 'bg-white'
+              }`}
+            >
+              <span
+                className={`absolute top-[15px] ${card.id === 2 ? 'left-[25px]' : card.id === 1 ? 'left-[36px]' : 'left-[42px]'} text-[150px] font-bold leading-none transition-colors duration-500 ${
+                  isHovered ? 'text-white' : 'text-[#1D1D1D]'
+                }`}
+              >
+                {card.id}
+              </span>
+              <h3
+                className={`text-[35px] font-bold mb-4 transition-colors duration-500 ${
+                  isHovered ? 'text-white' : 'text-[#1D1D1D]'
+                }`}
+              >
+                {card.title}
+              </h3>
+              <p
+                className={`text-[20px] leading-[30px] transition-colors duration-500 ${
+                  isHovered ? 'text-white/90' : 'text-[#1D1D1D]/80'
+                }`}
+              >
+                {card.text}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

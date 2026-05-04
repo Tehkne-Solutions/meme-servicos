@@ -1,74 +1,63 @@
-"use client";
+import React from 'react';
 
-const items = [
-  "Diagnóstico completo",
-  "Plano de crescimento estratégico",
-  "Funil de aquisição estruturado",
-  "Plano de execução 30 dias",
-  "Direcionamento de canais",
-  "Métricas e acompanhamento",
-];
-
-export default function Deliverables() {
+const Deliverables = () => {
   return (
-    <section className="relative py-24 px-4 bg-[#1D1D1D] font-['Plus_Jakarta_Sans'] overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#FF1E5B] to-[#6C5CE7]"></div>
-      </div>
+    <section className="w-full flex justify-center my-32 font-['Plus_Jakarta_Sans'] overflow-visible">
+      {/* Container Principal Azul - Fiel às medidas: 1220px x 450px */}
+      <div className="relative w-[1220px] h-[450px] bg-[#6767F1]">
 
-      <div className="relative max-w-[1310px] mx-auto">
-        {/* Overlay Box */}
-        <div className="relative bg-white rounded-[20px] p-16 shadow-2xl">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-[64px] font-bold leading-[81px] text-[#1D1D1D] mb-4">
-              Valor dos <span className="text-[#FF1E5B]">Entregáveis</span>
-            </h2>
-            <p className="text-[24px] leading-[36px] text-[#666666] max-w-[800px] mx-auto">
-              Tudo que você recebe ao contratar nossos serviços de marketing estratégico
+        {/* Coluna 1: Valores (Esquerda) - Offset exato calculado (155px - 110px = 45px) */}
+        <div className="absolute left-[45px] top-[122px] flex flex-col gap-[84px] w-[297px]">
+          <div>
+            <p className="text-white opacity-80 text-[25px] font-normal leading-[34px]">
+              Valor total estimado:
+            </p>
+            <p className="text-white text-[25px] font-bold leading-[34px]">
+              R$ 80.000
             </p>
           </div>
 
-          {/* Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Valor Total */}
-            <div className="text-center lg:text-left">
-              <p className="text-[20px] font-normal text-[#666666] mb-2">Valor total estimado:</p>
-              <h3 className="text-[48px] font-bold text-[#1D1D1D] mb-4">R$ 50.000</h3>
-              <p className="text-[18px] leading-[27px] text-[#666666] mb-6">
-                Valor percebido com todos os entregáveis incluídos.
-              </p>
-              <div className="inline-block bg-[#80D509] text-white px-6 py-3 rounded-[10px] font-semibold text-[16px]">
-                GARANTIA TOTAL
-              </div>
-            </div>
-
-            {/* Lista de Itens */}
-            <div>
-              <h4 className="text-[32px] font-bold text-[#1D1D1D] mb-6">Incluindo:</h4>
-              <ul className="space-y-4">
-                {items.map((item, index) => (
-                  <li key={index} className="flex gap-4 items-start text-[20px] leading-[30px] text-[#1D1D1D]">
-                    <span className="text-[#80D509] text-[24px] mt-1">✓</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* CTA Section */}
-            <div className="text-center lg:text-right">
-              <p className="text-[20px] leading-[30px] text-[#666666] mb-6">
-                Pronto para transformar seu negócio com estratégia de marketing profissional?
-              </p>
-              <a href="#contato" className="btn-premium inline-flex items-center justify-center w-full lg:w-[300px] h-[60px] text-[18px] font-normal">
-                Quero meus entregáveis
-              </a>
-            </div>
+          <div>
+            <p className="text-white opacity-80 text-[25px] font-normal leading-[34px]">
+              Valor percebido:
+            </p>
+            <p className="text-white text-[25px] font-bold leading-[34px]">
+              acima de R$ 150.000
+            </p>
           </div>
         </div>
+
+        {/* Coluna 2: Lista "Incluindo" (Centro) - Offset exato calculado (492px - 110px = 382px) */}
+        <div className="absolute left-[382px] top-[122px] w-[378px]">
+          <h3 className="text-white text-[35px] font-bold leading-[32px] tracking-[-0.01em] mb-6">
+            Incluindo:
+          </h3>
+          <ul className="space-y-4">
+            {[
+              "Auditorias completas",
+              "Plano de crescimento (12 meses)",
+              "Ações priorizadas",
+              "Materiais prontos para uso"
+            ].map((item, index) => (
+              <li key={index} className="flex items-center gap-3 text-white text-[22px] font-normal">
+                <span className="text-[#1D1D1D] font-bold text-[20px]">✔</span>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Coluna 3: Box com Borda Preta "Valor dos Entregáveis" */}
+        {/* Offset Esquerda: 902px - 110px = 792px | Offset Topo: 3182px - 3132px = 50px */}
+        <div className="absolute left-[792px] top-[50px] w-[378px] h-[480px] border-[4px] border-[#1D1D1D] bg-transparent flex items-center justify-center">
+          <h2 className="text-white text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-center w-[273px]">
+            Valor dos Entregáveis
+          </h2>
+        </div>
+
       </div>
     </section>
   );
-}
+};
+
+export default Deliverables;

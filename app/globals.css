@@ -67,3 +67,44 @@ select {
 .fade-in {
   animation: fadeIn 0.5s ease;
 }
+
+@keyframes shimmer {
+  0% { transform: translateX(-150%) skewX(-25deg); }
+  100% { transform: translateX(150%) skewX(-25deg); }
+}
+
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  background-color: #FF1E5B;
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-premium::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: translateX(-150%) skewX(-25deg);
+}
+
+.btn-premium:hover::after {
+  animation: shimmer 0.8s;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 30, 91, 0.3);
+}
+

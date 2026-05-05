@@ -28,27 +28,30 @@ const initialFormData: LeadFormData = {
 };
 
 const sharedInputClasses =
-  "w-full border-2 border-[#6C5CE7] bg-white px-6 text-[18px] text-[#1A1A1A] outline-none transition-all placeholder:text-[18px] placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
+  "w-full h-[65px] border-2 border-[#6C5CE7] bg-white px-6 text-[18px] text-[#1A1A1A] outline-none transition-all placeholder:text-[18px] placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
 
 const variantCopy = {
   hero: {
     formClassName: "flex flex-col gap-5",
-    emailPlaceholder: "E-mail Corporativo",
-    phonePlaceholder: "WhatsApp",
-    sectorPlaceholder: "Setor",
-    revenuePlaceholder: "Faturamento",
+    namePlaceholder: "Nome completo",
+    emailPlaceholder: "Qual seu e-mail corporativo?",
+    phonePlaceholder: "Telefone / WhatsApp",
+    sectorPlaceholder: "Setor de atuação",
+    revenuePlaceholder: "Faturamento mensal",
   },
   footer: {
     formClassName: "flex flex-col gap-5",
+    namePlaceholder: "Nome completo",
     emailPlaceholder: "Qual seu e-mail corporativo?",
     phonePlaceholder: "Telefone / WhatsApp",
-    sectorPlaceholder: "Setor de Atuação",
-    revenuePlaceholder: "Faturamento Mensal",
+    sectorPlaceholder: "Setor de atuação",
+    revenuePlaceholder: "Faturamento mensal",
   },
 } satisfies Record<
   LeadFormVariant,
   {
     formClassName: string;
+    namePlaceholder: string;
     emailPlaceholder: string;
     phonePlaceholder: string;
     sectorPlaceholder: string;
@@ -104,11 +107,8 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
   };
 
   const copy = variantCopy[variant];
-  const inputClassName = `${sharedInputClasses} h-[65px]`;
   const buttonClassName =
-    variant === "footer"
-      ? "cta-premium mt-4 flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-4 text-center text-[20px] font-black uppercase leading-tight text-white shadow-lg hover:brightness-110 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      : "cta-premium flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-4 text-center text-[20px] font-black uppercase leading-tight text-white shadow-lg hover:brightness-110 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
+    "cta-premium mt-2 flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-6 text-center text-[20px] font-black uppercase leading-tight text-white shadow-md hover:brightness-105 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
 
   const messageClassName =
     variant === "footer"
@@ -125,10 +125,10 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
     <form onSubmit={handleSubmit} className={copy.formClassName}>
       <input
         autoComplete="name"
-        className={inputClassName}
+        className={sharedInputClasses}
         name="nome"
         onChange={handleChange}
-        placeholder="Nome Completo"
+        placeholder={copy.namePlaceholder}
         required
         type="text"
         value={formData.nome}
@@ -136,7 +136,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
 
       <input
         autoComplete="email"
-        className={`${inputClassName} uppercase`}
+        className={sharedInputClasses}
         name="email"
         onChange={handleChange}
         placeholder={copy.emailPlaceholder}
@@ -145,10 +145,10 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         value={formData.email}
       />
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <input
           autoComplete="organization"
-          className={inputClassName}
+          className={sharedInputClasses}
           name="empresa"
           onChange={handleChange}
           placeholder="Empresa"
@@ -159,7 +159,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
 
         <input
           autoComplete="tel"
-          className={inputClassName}
+          className={sharedInputClasses}
           name="telefone"
           onChange={handleChange}
           placeholder={copy.phonePlaceholder}
@@ -169,9 +169,9 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
         <input
-          className={inputClassName}
+          className={sharedInputClasses}
           name="setor"
           onChange={handleChange}
           placeholder={copy.sectorPlaceholder}
@@ -181,7 +181,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         />
 
         <input
-          className={inputClassName}
+          className={sharedInputClasses}
           name="faturamento"
           onChange={handleChange}
           placeholder={copy.revenuePlaceholder}

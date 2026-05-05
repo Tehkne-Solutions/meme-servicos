@@ -2,46 +2,59 @@ import React from "react";
 
 const deliverables = [
   "Auditorias completas",
-  "Plano de crescimento (12 meses)",
+  "Plano de crescimento",
   "Ações priorizadas",
   "Materiais prontos para uso",
 ];
 
 const Deliverables = () => {
   return (
-    <section className="w-full overflow-visible bg-white py-24 font-['Plus_Jakarta_Sans']">
+    <section className="w-full bg-white py-32 font-sans">
       <div className="mx-auto max-w-[1320px] px-8 lg:px-12">
-        <div className="relative flex min-h-[400px] flex-col justify-between gap-10 bg-[#6C5CE7] p-12 md:pr-[420px] lg:p-16 lg:pr-[440px]">
-          <div className="w-full space-y-8 text-white md:w-1/2">
-            <div>
-              <p className="text-lg opacity-80">Valor total estimado:</p>
-              <h3 className="text-3xl font-bold">R$ 80.000</h3>
+        <div className="relative flex min-h-[500px] items-center bg-[#6C5CE7] p-12 lg:p-16">
+          <div className="flex w-full flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
+            {/* Coluna de Valores (Esquerda) */}
+            <div className="flex flex-col justify-between space-y-16 text-white md:space-y-24">
+              <div className="space-y-2">
+                <p className="text-[20px] font-medium opacity-90">Valor total estimado:</p>
+                <h3 className="text-[40px] font-bold leading-none">R$ 80.000</h3>
+              </div>
+              <div className="space-y-2">
+                <p className="text-[20px] font-medium opacity-90">Valor percebido:</p>
+                <h3 className="text-[40px] font-bold leading-none">acima de R$ 150.000</h3>
+              </div>
             </div>
 
-            <div className="space-y-4">
-              <h4 className="text-2xl font-bold">Incluindo:</h4>
-              <ul className="space-y-2 text-lg">
+            {/* Coluna da Lista (Centro) */}
+            <div className="flex-1 text-white lg:pl-16">
+              <h4 className="mb-8 text-[28px] font-bold uppercase tracking-tight">Incluindo:</h4>
+              <ul className="space-y-5 text-[18px]">
                 {deliverables.map((item) => (
-                  <li key={item} className="flex items-center gap-2">
-                    ✓ {item}
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-1 font-bold">✓</span>
+                    {item === "Plano de crescimento" ? (
+                      <span>
+                        {item} <span className="text-[16px] opacity-80">(12 meses)</span>
+                      </span>
+                    ) : (
+                      <span>{item}</span>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div>
-              <p className="text-lg opacity-80">Valor percebido:</p>
-              <h3 className="text-3xl font-bold">acima de R$ 150.000</h3>
-            </div>
-          </div>
+            {/* Espaçador para o Card Absoluto no Desktop */}
+            <div className="hidden w-[380px] lg:block" />
 
-          <div className="w-full bg-white p-10 shadow-2xl md:absolute md:right-8 md:top-12 md:max-w-[380px] lg:right-16 lg:-bottom-12 lg:top-auto lg:p-12">
-            <div className="flex items-center justify-center border-[3px] border-black px-8 py-10">
-              <h2 className="text-center text-[42px] font-black leading-tight text-[#6C5CE7]">
-                Valor dos
-                <br />
-                Entregáveis
-              </h2>
+            {/* Card Lateral (Design Fiel: Retângulo vertical com borda vazando) */}
+            <div className="z-10 w-full max-w-[380px] md:absolute md:-bottom-24 md:right-12 lg:right-16">
+              <div className="absolute -bottom-4 -right-4 h-full w-full border-[3px] border-black bg-white" />
+              <div className="relative flex h-[520px] flex-col justify-center border-[3px] border-black bg-[#6C5CE7] p-12">
+                <h2 className="text-left text-[50px] font-black uppercase leading-[1.05] text-white lg:text-[64px]">
+                  Valor dos<br />Entregáveis
+                </h2>
+              </div>
             </div>
           </div>
         </div>

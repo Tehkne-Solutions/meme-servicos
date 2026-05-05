@@ -50,34 +50,33 @@ const Method = () => {
                 key={card.id}
                 onMouseEnter={() => setHoveredCard(card.id)}
                 onMouseLeave={() => setHoveredCard(null)}
-                className={`group relative transition-all duration-500 p-12 h-[420px] flex flex-col justify-end overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 cursor-pointer ${
-                  isHovered ? 'bg-[#FF1E5B]' : 'bg-white'
+                className={`transition-all duration-500 p-10 h-[415px] flex flex-col justify-start border border-transparent shadow-sm cursor-pointer ${
+                  isHovered ? 'bg-[#FF1E5B] -translate-y-2' : 'bg-white'
                 }`}
               >
-                <span
-                  className={`absolute top-4 left-8 text-[150px] font-bold leading-none transition-all duration-500 ${
-                    isHovered ? 'text-white opacity-100' : 'text-[#1D1D1D] opacity-100'
-                  }`}
-                >
-                  {card.id}
-                </span>
-
-                <div className="relative z-10">
+                <div className="flex items-baseline gap-4 mb-6">
+                  <span
+                    className={`text-[80px] font-bold leading-none transition-colors ${
+                      isHovered ? 'text-white' : 'text-[#1D1D1D]'
+                    }`}
+                  >
+                    {card.id}
+                  </span>
                   <h3
-                    className={`text-[32px] font-bold mb-6 transition-colors duration-500 ${
+                    className={`text-[32px] font-light transition-colors ${
                       isHovered ? 'text-white' : 'text-[#1D1D1D]'
                     }`}
                   >
                     {card.title}
                   </h3>
-                  <p
-                    className={`text-[19px] leading-[1.5] transition-colors duration-500 ${
-                      isHovered ? 'text-white/90' : 'text-[#1D1D1D]/70'
-                    }`}
-                  >
-                    {card.text}
-                  </p>
                 </div>
+                <p
+                  className={`text-[18px] leading-[1.6] transition-colors ${
+                    isHovered ? 'text-white/90' : 'text-[#1D1D1D]/70'
+                  }`}
+                >
+                  {card.text}
+                </p>
               </div>
             );
           })}

@@ -5,6 +5,7 @@ import Timeline30Days from "@/components/Timeline30Days";
 import Deliverables from "@/components/Deliverables";
 import Method from "@/components/Method";
 import FAQ from "@/components/FAQ";
+import AcquisitionSection from "@/components/AcquisitionSection";
 import MartechSection from "@/components/Martech";
 import LeadsProcess from "@/components/LeadsProcess";
 import Differentials from "@/components/Differentials";
@@ -22,6 +23,7 @@ export default function Home() {
       <Deliverables />
       <FAQ />
       <Method />
+      <AcquisitionSection />
       <MartechSection />
       <LeadsProcess />
       <Differentials />

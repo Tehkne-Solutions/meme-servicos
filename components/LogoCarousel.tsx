@@ -22,18 +22,14 @@ export const LogoCarousel = () => {
         <motion.div
           className="flex flex-nowrap items-center gap-32"
           animate={{ x: ["0%", "-33.33%"] }}
-          transition={{
-            ease: "linear",
-            duration: 30,
-            repeat: Infinity,
-          }}
+          transition={{ ease: "linear", duration: 30, repeat: Infinity }}
         >
           {finalLogos.map((logo, index) => (
             <img
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className="h-32 w-auto object-contain flex-shrink-0 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+              className="h-16 w-auto max-w-[200px] object-contain flex-shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
             />
           ))}
         </motion.div>

@@ -6,10 +6,11 @@ import { FadeIn } from "./MotionWrapper";
 const Deliverables = () => {
   return (
     <section className="w-full py-24 bg-white font-['Plus_Jakarta_Sans']">
-      <div className="mx-auto max-w-[1220px] px-4 md:px-0 relative h-[450px]">
-        {/* Container Roxo Principal */}
-        <div className="absolute inset-0 bg-[#6767F1] flex items-center px-16 z-10">
-          <div className="grid grid-cols-3 w-full items-center gap-8">
+      <div className="mx-auto max-w-[1220px] px-4 md:px-0 relative h-[500px]">
+
+        {/* Bloco Roxo — ocupa 90% da largura */}
+        <div className="absolute left-0 top-0 w-[90%] h-[450px] bg-[#6767F1] flex items-center px-16 z-10">
+          <div className="grid grid-cols-2 w-full items-center gap-8">
 
             <FadeIn delay={0.2}>
               <div className="text-white space-y-10">
@@ -36,19 +37,20 @@ const Deliverables = () => {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.6} direction="left">
-              <div className="flex justify-end">
-                <h2 className="text-white text-[55px] font-bold leading-[1.1] text-right tracking-[-0.03em]">
-                  Valor dos<br />Entregáveis
-                </h2>
-              </div>
-            </FadeIn>
-
           </div>
         </div>
 
-        {/* Borda Preta Decorativa — z-20 na frente do roxo */}
-        <div className="absolute right-[-15px] top-[45px] w-[378px] h-[480px] border-[4px] border-[#1D1D1D] z-20 pointer-events-none" />
+        {/* Moldura preta + texto "Valor dos Entregáveis" dentro dela */}
+        <FadeIn delay={0.6} direction="left">
+          <div className="absolute right-0 top-0 z-20 flex items-start justify-end h-full">
+            <div className="border-[4px] border-[#1D1D1D] p-12 bg-transparent mt-10">
+              <h2 className="text-white text-[52px] font-bold leading-[1.1] text-right tracking-[-0.03em]">
+                Valor dos<br />Entregáveis
+              </h2>
+            </div>
+          </div>
+        </FadeIn>
+
       </div>
     </section>
   );

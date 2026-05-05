@@ -28,11 +28,11 @@ const initialFormData: LeadFormData = {
 };
 
 const sharedInputClasses =
-  "w-full border-2 border-[#6C5CE7] bg-white px-6 text-[17px] text-[#1A1A1A] outline-none transition-all placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
+  "w-full border-2 border-[#6C5CE7] bg-white px-6 text-[18px] text-[#1A1A1A] outline-none transition-all placeholder:text-[18px] placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
 
 const variantCopy = {
   hero: {
-    formClassName: "flex flex-col gap-4",
+    formClassName: "flex flex-col gap-5",
     emailPlaceholder: "E-mail Corporativo",
     phonePlaceholder: "WhatsApp",
     sectorPlaceholder: "Setor",
@@ -104,11 +104,11 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
   };
 
   const copy = variantCopy[variant];
-  const inputClassName = `${sharedInputClasses} h-[62px]`;
+  const inputClassName = `${sharedInputClasses} h-[65px]`;
   const buttonClassName =
     variant === "footer"
-      ? "cta-premium mt-4 h-[70px] w-full bg-[#80D509] text-[18px] font-black uppercase text-white shadow-md hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      : "cta-premium h-[70px] w-full bg-[#80D509] text-[18px] font-black uppercase text-white shadow-xl hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
+      ? "cta-premium mt-4 flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-4 text-center text-[20px] font-black uppercase leading-tight text-white shadow-lg hover:brightness-110 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+      : "cta-premium flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-4 text-center text-[20px] font-black uppercase leading-tight text-white shadow-lg hover:brightness-110 disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
 
   const messageClassName =
     variant === "footer"

@@ -61,9 +61,12 @@ const AcquisitionSection = () => {
             Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
           </p>
 
-          <button className="bg-[#80D509] px-12 py-6 text-[20px] font-bold uppercase text-white shadow-[0_10px_20px_rgba(128,213,9,0.3)] transition-all hover:bg-[#72be08]">
+          <a
+            href="#contato"
+            className="cta-premium inline-flex items-center justify-center bg-[#80D509] px-12 py-6 text-[20px] font-bold uppercase text-white shadow-[0_10px_20px_rgba(128,213,9,0.3)] hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)]"
+          >
             Solicitar Proposta
-          </button>
+          </a>
         </div>
       </div>
     </section>

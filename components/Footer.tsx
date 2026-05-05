@@ -1,33 +1,29 @@
-"use client";
+import Image from "next/image";
+import LeadCaptureForm from "./LeadCaptureForm";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
-
   return (
-    <footer className="bg-[#0f0f0f] text-gray text-small py-8">
-      <div className="container-custom border-t border-white/10 pt-6">
-        <div className="grid grid-cols-12 gap-6 items-start">
-          <div className="col-span-12 md:col-span-4">
-            <p className="font-semibold text-white">Meme Digital</p>
-            <p className="mt-2">Estratégia Digital para Crescimento Real</p>
+    <footer
+      id="contato"
+      className="relative flex min-h-[839px] w-full items-center bg-[#1A1A1A] py-24 font-sans"
+    >
+      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col justify-between gap-16 px-8 lg:flex-row lg:items-end lg:gap-0 lg:px-[140px]">
+        <div className="flex h-full min-h-[300px] w-full items-end justify-start lg:w-1/2 lg:pb-12">
+          <div className="relative h-[61px] w-[196px]">
+            <Image
+              src="/images/meme-digital-logo-rodape.png"
+              alt="Meme Digital Logo"
+              fill
+              className="object-contain"
+            />
           </div>
-          <div className="col-span-12 md:col-span-2">
-            <p className="font-semibold text-white mb-3">Links</p>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition">Sobre</a></li>
-              <li><a href="#" className="hover:text-white transition">Serviços</a></li>
-            </ul>
-          </div>
-          <div className="col-span-12 md:col-span-2">
-            <p className="font-semibold text-white mb-3">Contato</p>
-            <ul className="space-y-2">
-              <li><a href="mailto:contato@meme.digital" className="hover:text-white transition">Email</a></li>
-              <li><a href="https://wa.me" className="hover:text-white transition">WhatsApp</a></li>
-            </ul>
-          </div>
-          <div className="col-span-12 md:col-span-4 text-right">
-            <p>© {year} Meme Digital. Todos os direitos reservados.</p>
-          </div>
+        </div>
+
+        <div className="w-full max-w-[614px] shrink-0 border-t-8 border-[#6C5CE7] bg-white p-8 shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5)] md:p-12">
+          <LeadCaptureForm
+            variant="footer"
+            submitLabel="Encontre oportunidades para seu negócio"
+          />
         </div>
       </div>
     </footer>

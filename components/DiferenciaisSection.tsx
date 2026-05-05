@@ -50,9 +50,12 @@ export default function DiferenciaisSection() {
             ))}
           </div>
 
-          <button className="shrink-0 bg-[#FF1E5B] px-8 py-4 text-[18px] font-bold text-white transition-all hover:bg-[#E61A52]">
+          <a
+            href="#contato"
+            className="cta-premium shrink-0 bg-[#FF1E5B] px-8 py-4 text-[18px] font-bold text-white hover:bg-[#E61A52] hover:shadow-[0_15px_30px_rgba(255,30,91,0.28)]"
+          >
             Entender como trabalhamos
-          </button>
+          </a>
         </div>
 
         <div className="w-full border-t border-gray-100 pt-12">

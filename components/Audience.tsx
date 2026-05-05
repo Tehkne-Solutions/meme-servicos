@@ -30,9 +30,12 @@ export default function Audience() {
         <p className="text-[22px] leading-[32px] text-[#1A1A1A] mb-10 tracking-[-0.01em]">
           Para empresas que faturam a partir de R$ 70 mil/mês e querem:
         </p>
-        <button className="w-full h-[70px] bg-[#FF1E5B] text-white text-[16px] font-semibold uppercase tracking-wider hover:brightness-110 transition-all">
+        <a
+          href="#contato"
+          className="cta-premium flex h-[70px] w-full items-center justify-center bg-[#FF1E5B] text-[16px] font-semibold uppercase tracking-wider text-white hover:brightness-110 hover:shadow-[0_15px_30px_rgba(255,30,91,0.28)]"
+        >
           Falar com um Especialista
-        </button>
+        </a>
       </div>
 
       {/* COLUNA DIREITA: GRID DE BENEFÍCIOS */}

@@ -6,9 +6,9 @@ type ContactRequestBody = {
   nome?: unknown;
   email?: unknown;
   empresa?: unknown;
-  site?: unknown;
-  cargo?: unknown;
   telefone?: unknown;
+  setor?: unknown;
+  faturamento?: unknown;
 };
 
 export const runtime = "nodejs";
@@ -20,27 +20,6 @@ function sanitize(value: unknown) {
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-function normalizeSiteUrl(site: string) {
-  if (!site) {
-    return "";
-  }
-
-  return /^https?:\/\//i.test(site) ? site : `https://${site}`;
-}
-
-function isValidUrl(url: string) {
-  if (!url) {
-    return true;
-  }
-
-  try {
-    new URL(url);
-    return true;
-  } catch {
-    return false;
-  }
 }
 
 function resolveEndpoint() {
@@ -69,20 +48,16 @@ export async function POST(request: Request) {
   const nome = sanitize(body.nome);
   const email = sanitize(body.email);
   const empresa = sanitize(body.empresa);
-  const cargo = sanitize(body.cargo);
   const telefone = sanitize(body.telefone);
-  const site = normalizeSiteUrl(sanitize(body.site));
+  const setor = sanitize(body.setor);
+  const faturamento = sanitize(body.faturamento);
 
-  if (!nome || !email || !empresa || !cargo || !telefone) {
+  if (!nome || !email || !empresa || !telefone || !setor || !faturamento) {
     return NextResponse.json({ error: "Preencha todos os campos obrigatórios." }, { status: 400 });
   }
 
   if (!isValidEmail(email)) {
     return NextResponse.json({ error: "Informe um e-mail válido." }, { status: 400 });
-  }
-
-  if (site && !isValidUrl(site)) {
-    return NextResponse.json({ error: "Informe um site válido." }, { status: 400 });
   }
 
   const endpoint = resolveEndpoint();
@@ -100,9 +75,9 @@ export async function POST(request: Request) {
     nome,
     email,
     empresa,
-    site,
-    cargo,
     telefone,
+    setor,
+    faturamento,
     recipient: RECIPIENT_EMAIL,
     source: "meme-servicos-landing-page",
     _replyto: email,

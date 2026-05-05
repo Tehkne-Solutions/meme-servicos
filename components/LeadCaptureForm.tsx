@@ -13,18 +13,18 @@ type LeadFormData = {
   nome: string;
   email: string;
   empresa: string;
-  site: string;
-  cargo: string;
   telefone: string;
+  setor: string;
+  faturamento: string;
 };
 
 const initialFormData: LeadFormData = {
   nome: "",
   email: "",
   empresa: "",
-  site: "",
-  cargo: "",
   telefone: "",
+  setor: "",
+  faturamento: "",
 };
 
 const sharedInputClasses =
@@ -79,13 +79,13 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
 
   const inputClassName =
     variant === "footer"
-      ? `${sharedInputClasses} h-[55px] border-[2px] border-[#6C5CE7] px-4 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20`
-      : `${sharedInputClasses} h-[62px] border border-white/10 px-5 focus:ring-2 focus:ring-white/40`;
+      ? `${sharedInputClasses} h-[62px] border border-[#6C5CE7] px-6 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20`
+      : `${sharedInputClasses} h-[55px] border-[2px] border-[#6C5CE7] px-4 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20`;
 
   const buttonClassName =
     variant === "footer"
-      ? "cta-premium mt-4 h-[65px] w-full bg-[#80D509] text-[16px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      : "cta-premium mt-6 h-[62px] w-full bg-[#80D509] px-8 text-[15px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
+      ? "cta-premium mt-4 h-[65px] w-full bg-[#80D509] text-[15px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+      : "cta-premium h-[65px] w-full bg-[#80D509] text-[15px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
 
   const messageClassName =
     variant === "footer"
@@ -135,37 +135,36 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         />
 
         <input
-          autoComplete="url"
+          autoComplete="tel"
           className={inputClassName}
-          name="site"
+          name="telefone"
           onChange={handleChange}
-          placeholder="Site da Empresa"
-          type="text"
-          value={formData.site}
+          placeholder="Telefone / WhatsApp"
+          required
+          type="tel"
+          value={formData.telefone}
         />
       </div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <input
-          autoComplete="organization-title"
           className={inputClassName}
-          name="cargo"
+          name="setor"
           onChange={handleChange}
-          placeholder="Seu Cargo"
+          placeholder="Setor de Atuação"
           required
           type="text"
-          value={formData.cargo}
+          value={formData.setor}
         />
 
         <input
-          autoComplete="tel"
           className={inputClassName}
-          name="telefone"
+          name="faturamento"
           onChange={handleChange}
-          placeholder="WhatsApp / Telefone"
+          placeholder="Faturamento Mensal"
           required
-          type="tel"
-          value={formData.telefone}
+          type="text"
+          value={formData.faturamento}
         />
       </div>
 

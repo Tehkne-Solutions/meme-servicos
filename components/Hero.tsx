@@ -32,7 +32,7 @@ export default function Hero() {
 
           <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-[614px] rounded-none bg-[#6C5CE7] p-8 sm:p-10">
-              <LeadCaptureForm variant="hero" submitLabel="Quero meu mapa estratégico" />
+              <LeadCaptureForm variant="hero" submitLabel="Quero impulsionar meu negócio" />
             </div>
           </div>
         </div>

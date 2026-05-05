@@ -3,26 +3,38 @@ import LeadCaptureForm from "./LeadCaptureForm";
 
 export default function Footer() {
   return (
-    <footer
-      id="contato"
-      className="relative flex min-h-[839px] w-full items-center bg-[#1A1A1A] py-24 font-sans"
-    >
-      <div className="mx-auto flex h-full w-full max-w-[1440px] flex-col justify-between gap-16 px-8 lg:flex-row lg:items-end lg:gap-0 lg:px-[140px]">
-        <div className="flex h-full min-h-[300px] w-full items-end justify-start lg:w-1/2 lg:pb-12">
+    <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-24 font-sans">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-8 lg:flex-row lg:px-[140px]">
+        <div className="w-full text-white lg:w-1/2">
+          <h2 className="mb-8 text-[64px] font-bold leading-[1.1]">
+            Conectamos
+            <br />
+            Pessoas e
+            <br />
+            Negócios no
+            <br />
+            Digital
+          </h2>
+
+          <p className="mb-12 max-w-[440px] text-[18px] font-light opacity-80">
+            Somos uma agência MARTECH dedicada a proporcionar boas experiências de usuário e
+            impulsionar conversões no B2B e B2C.
+          </p>
+
           <div className="relative h-[61px] w-[196px]">
             <Image
               src="/images/meme-digital-logo-rodape.png"
-              alt="Meme Digital Logo"
+              alt="Meme Digital"
               fill
               className="object-contain"
             />
           </div>
         </div>
 
-        <div className="w-full max-w-[614px] shrink-0 border-t-8 border-[#6C5CE7] bg-white p-8 shadow-[0_30px_60px_-12px_rgba(0,0,0,0.5)] md:p-12">
+        <div className="w-full max-w-[614px] bg-white p-12 shadow-2xl md:p-16">
           <LeadCaptureForm
             variant="footer"
-            submitLabel="Encontre oportunidades para seu negócio"
+            submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÓCIO"
           />
         </div>
       </div>

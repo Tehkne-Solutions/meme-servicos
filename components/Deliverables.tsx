@@ -1,3 +1,5 @@
+﻿"use client";
+
 import React from "react";
 import { FadeIn } from "./MotionWrapper";
 
@@ -17,20 +19,20 @@ const Deliverables = () => {
             </div>
           </FadeIn>
 
-          {/* Seção Incluindo (Centro) */}
+          {/* SeÃ§Ã£o Incluindo (Centro) */}
           <FadeIn delay={0.4}>
             <div className="mb-8 max-w-[378px] md:absolute md:left-[460px] md:top-[122px] md:mb-0">
               <h4 className="mb-6 text-[35px] font-bold leading-[32px] tracking-[-0.01em] text-white">
                 Incluindo:
               </h4>
               <ul className="list-none space-y-4 text-[20px] font-bold text-white">
-                <li className="flex items-start gap-2">✓ Auditorias completas</li>
+                <li className="flex items-start gap-2">âœ“ Auditorias completas</li>
                 <li className="flex items-start gap-2">
-                  ✓ Plano de crescimento{" "}
+                  âœ“ Plano de crescimento{" "}
                   <span className="text-[14px] font-normal opacity-80">(12 meses)</span>
                 </li>
-                <li className="flex items-start gap-2">✓ Ações priorizadas</li>
-                <li className="flex items-start gap-2">✓ Materiais prontos para uso</li>
+                <li className="flex items-start gap-2">âœ“ AÃ§Ãµes priorizadas</li>
+                <li className="flex items-start gap-2">âœ“ Materiais prontos para uso</li>
               </ul>
             </div>
           </FadeIn>
@@ -51,12 +53,12 @@ const Deliverables = () => {
               <h2 className="text-left text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-white">
                 Valor dos
                 <br />
-                Entregáveis
+                EntregÃ¡veis
               </h2>
             </div>
           </FadeIn>
         </div>
-        {/* Compensação do overflow para o layout da página */}
+        {/* CompensaÃ§Ã£o do overflow para o layout da pÃ¡gina */}
         <div className="hidden h-[100px] md:block" />
       </div>
     </section>

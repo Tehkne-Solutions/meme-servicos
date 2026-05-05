@@ -1,11 +1,13 @@
+﻿"use client";
+
 import Image from "next/image";
 import { motion } from "framer-motion";
 
 const tags = [
-  "Profundidade real personalização total",
-  "Ativos reais e não só análises",
-  "Equipe sênior meme7",
-  "Estratégia + execução",
+  "Profundidade real personalizaÃ§Ã£o total",
+  "Ativos reais e nÃ£o sÃ³ anÃ¡lises",
+  "Equipe sÃªnior meme7",
+  "EstratÃ©gia + execuÃ§Ã£o",
   "Foco direto em faturamento",
 ];
 

@@ -34,3 +34,5 @@
 - `7eab485` docs: update CHANGELOG with commit hash and details (1 file changed, 6 insertions, 6 deletions)
 - `e4a7852` docs: finalize CHANGELOG with all commit details (1 file changed, 1 insertion, 1 deletion)
 - `db542e1` feat: add client logos images and finalize CHANGELOG (9 files changed, 2 insertions)
+- `253177e` docs: update CHANGELOG with final commit hash (1 file changed, 1 insertion)
+- `e0f8bae` fix: add missing @studio-freight/react-lenis dependency (2 files changed, 111 insertions, 3 deletions)

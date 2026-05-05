@@ -3,7 +3,7 @@ import StrategicMap from "@/components/StrategicMap";
 import Audience from "@/components/Audience";
 import Timeline30Days from "@/components/Timeline30Days";
 import Deliverables from "@/components/Deliverables";
-import Method from "@/components/FAQ";
+import Method from "@/components/Method";
 import FAQ from "@/components/FAQ";
 import AcquisitionSection from "@/components/AcquisitionSection";
 import MartechSection from "@/components/Martech";

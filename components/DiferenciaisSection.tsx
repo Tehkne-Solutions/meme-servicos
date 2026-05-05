@@ -22,20 +22,21 @@ export default function DiferenciaisSection() {
           </h2>
         </FadeIn>
 
-        {/* items-end alinha as bases das duas imagens */}
         <FadeIn delay={0.3}>
           <div className="flex gap-10 items-end mb-16">
-            <div className="w-[62%]">
+            {/* Imagem 1 — maior, altura fixa */}
+            <div className="w-[62%] h-[352px] overflow-hidden">
               <img
                 src="/images/meme-digital-diferenciais-1.png"
-                className="w-full h-auto object-contain block"
+                className="w-full h-full object-cover"
                 alt="Diferencial Principal"
               />
             </div>
-            <div className="w-[38%]">
+            {/* Imagem 2 — menor, mesma altura */}
+            <div className="w-[38%] h-[352px] overflow-hidden">
               <img
                 src="/images/meme-digital-diferenciais-2.png"
-                className="w-full h-auto object-contain block"
+                className="w-full h-full object-cover"
                 alt="Diferencial Secundário"
               />
             </div>
@@ -48,7 +49,7 @@ export default function DiferenciaisSection() {
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="border border-[#6767F1] text-[#6767F1] px-6 py-2 rounded-full text-[14px] font-semibold"
+                  className="border-2 border-[#6767F1] text-[#6767F1] px-6 py-2 rounded-full text-[14px] font-medium uppercase"
                 >
                   {tag}
                 </span>
@@ -56,7 +57,7 @@ export default function DiferenciaisSection() {
             </div>
             <motion.a
               href="#contato"
-              className="btn-premium shrink-0 px-12 py-5 font-bold uppercase text-[15px]"
+              className="shrink-0 bg-[#FF1E5B] text-white px-12 py-5 font-bold uppercase text-[15px] hover:brightness-110 transition-all"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}

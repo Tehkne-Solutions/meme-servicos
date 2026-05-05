@@ -24,61 +24,64 @@ const Method = () => {
   ];
 
   return (
-    <section className="relative w-[1310px] h-[777px] mx-auto bg-[#EEEEEE] overflow-hidden font-['Plus_Jakarta_Sans']">
-      {/* Cabeçalho da Seção */}
-      <div className="absolute left-[145px] top-[71px]">
-        <h2 className="text-[64px] font-bold text-[#1D1D1D] leading-[81px]">Método Meme7</h2>
-        <p className="text-[18px] text-[#1D1D1D]/80 mt-2 w-[457px]">
-          Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
-        </p>
-      </div>
+    <section className="w-full bg-[#EEEEEE] py-24 font-['Plus_Jakarta_Sans']">
+      <div className="max-w-[1336px] mx-auto px-12">
+        <div className="flex justify-between items-end mb-16">
+          <div className="max-w-[600px]">
+            <h2 className="text-[64px] font-bold text-[#1D1D1D] leading-[1.1] mb-4">Método <span className="text-[#1D1D1D]">Meme7</span></h2>
+            <p className="text-[18px] text-[#1D1D1D]/80 leading-relaxed">
+              Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
+            </p>
+          </div>
+          <a
+            href="#contato"
+            className="btn-premium bg-[#6C5CE7] text-white px-10 py-4 text-[18px] font-semibold uppercase tracking-wider"
+          >
+            Fale com um especialista agora
+          </a>
+        </div>
 
-      {/* Botão Premium */}
-      <a
-        href="#contato"
-        className="btn-premium absolute left-[869px] top-[93px] w-[415px] h-[57px] bg-[#6C5CE7] flex items-center justify-center text-white text-[20px] uppercase transition-transform font-semibold"
-      >
-        Fale com um especialista agora
-      </a>
+        <div className="grid grid-cols-3 gap-8">
+          {memeCards.map((card) => {
+            const isHovered = hoveredCard === card.id;
 
-      {/* Container de Cards */}
-      <div className="absolute top-[280px] left-[145px] grid grid-cols-3 gap-[36px]">
-        {memeCards.map((card) => {
-          const isHovered = hoveredCard === card.id;
-
-          return (
-            <div
-              key={card.id}
-              onMouseEnter={() => setHoveredCard(card.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-              className={`transition-all duration-500 p-[36px] h-[415px] relative flex flex-col justify-end cursor-default ${
-                isHovered ? 'bg-[#FF1E5B] scale-105 shadow-2xl' : 'bg-white'
-              }`}
-            >
-              <span
-                className={`absolute top-[15px] ${card.id === 2 ? 'left-[25px]' : card.id === 1 ? 'left-[36px]' : 'left-[42px]'} text-[150px] font-bold leading-none transition-colors duration-500 ${
-                  isHovered ? 'text-white' : 'text-[#1D1D1D]'
+            return (
+              <div
+                key={card.id}
+                onMouseEnter={() => setHoveredCard(card.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                className={`group relative transition-all duration-500 p-12 h-[420px] flex flex-col justify-end overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 cursor-pointer ${
+                  isHovered ? 'bg-[#FF1E5B]' : 'bg-white'
                 }`}
               >
-                {card.id}
-              </span>
-              <h3
-                className={`text-[35px] font-bold mb-4 transition-colors duration-500 ${
-                  isHovered ? 'text-white' : 'text-[#1D1D1D]'
-                }`}
-              >
-                {card.title}
-              </h3>
-              <p
-                className={`text-[20px] leading-[30px] transition-colors duration-500 ${
-                  isHovered ? 'text-white/90' : 'text-[#1D1D1D]/80'
-                }`}
-              >
-                {card.text}
-              </p>
-            </div>
-          );
-        })}
+                <span
+                  className={`absolute top-4 left-8 text-[150px] font-bold leading-none transition-all duration-500 ${
+                    isHovered ? 'text-white opacity-100' : 'text-[#1D1D1D] opacity-100'
+                  }`}
+                >
+                  {card.id}
+                </span>
+
+                <div className="relative z-10">
+                  <h3
+                    className={`text-[32px] font-bold mb-6 transition-colors duration-500 ${
+                      isHovered ? 'text-white' : 'text-[#1D1D1D]'
+                    }`}
+                  >
+                    {card.title}
+                  </h3>
+                  <p
+                    className={`text-[19px] leading-[1.5] transition-colors duration-500 ${
+                      isHovered ? 'text-white/90' : 'text-[#1D1D1D]/70'
+                    }`}
+                  >
+                    {card.text}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

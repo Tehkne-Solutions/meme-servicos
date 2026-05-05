@@ -17,33 +17,38 @@ export default function DiferenciaisSection() {
     <section className="w-full py-24 bg-white font-sans">
       <div className="mx-auto max-w-[1320px] px-8">
         <FadeIn delay={0.2}>
-          <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-16 text-center">
+          <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-20 text-center">
             Diferenciais Meme Digital
           </h2>
         </FadeIn>
 
+        {/* items-end alinha as bases das duas imagens */}
         <FadeIn delay={0.3}>
-          <div className="flex gap-8 items-start mb-12">
-            <img
-              src="/images/meme-digital-diferenciais-1.png"
-              className="w-[65%] h-auto object-contain"
-              alt="Diferencial Principal"
-            />
-            <img
-              src="/images/meme-digital-diferenciais-2.png"
-              className="w-[35%] h-auto object-contain mt-12"
-              alt="Diferencial Secundário"
-            />
+          <div className="flex gap-10 items-end mb-16">
+            <div className="w-[62%]">
+              <img
+                src="/images/meme-digital-diferenciais-1.png"
+                className="w-full h-auto object-contain block"
+                alt="Diferencial Principal"
+              />
+            </div>
+            <div className="w-[38%]">
+              <img
+                src="/images/meme-digital-diferenciais-2.png"
+                className="w-full h-auto object-contain block"
+                alt="Diferencial Secundário"
+              />
+            </div>
           </div>
         </FadeIn>
 
         <FadeIn delay={0.4}>
           <div className="flex justify-between items-center">
-            <div className="flex flex-wrap gap-4 max-w-[850px]">
+            <div className="flex flex-wrap gap-3 max-w-[850px]">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="border border-[#6767F1] text-[#6767F1] px-6 py-2 rounded-full text-[14px]"
+                  className="border border-[#6767F1] text-[#6767F1] px-6 py-2 rounded-full text-[14px] font-semibold"
                 >
                   {tag}
                 </span>

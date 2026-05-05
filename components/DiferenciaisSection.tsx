@@ -17,7 +17,7 @@ export default function DiferenciaisSection() {
     <section className="w-full py-24 bg-white font-sans">
       <div className="mx-auto max-w-[1320px] px-8">
         <FadeIn delay={0.2}>
-          <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-20 text-center">
+          <h2 className="mb-12 font-sans text-[48px] font-bold leading-[1.1] text-[#1A1A1A] lg:text-[62px]">
             Diferenciais Meme Digital
           </h2>
         </FadeIn>

@@ -1,55 +1,56 @@
 "use client";
 
 import React from "react";
-import { FadeIn } from "./MotionWrapper";
 
 const Deliverables = () => {
   return (
-    <section className="relative w-full py-32 bg-white flex justify-center font-['Plus_Jakarta_Sans']">
-      {/* Container fixo 1220px */}
-      <div className="relative w-[1220px] h-[530px]">
-
-        {/* Bloco Roxo (Rectangle 12352) */}
-        <div className="absolute w-[1220px] h-[450px] bg-[#6767F1] left-0 top-0 z-10 flex items-center px-[45px]">
-          <div className="grid grid-cols-2 w-full">
-
-            <FadeIn delay={0.2}>
-              <div className="space-y-[50px]">
-                <div className="text-white">
-                  <p className="text-[25px] leading-[34px] opacity-80">Valor total estimado:</p>
-                  <p className="text-[25px] font-bold">R$ 80.000</p>
-                </div>
-                <div className="text-white">
-                  <p className="text-[25px] leading-[34px] opacity-80">Valor percebido:</p>
-                  <p className="text-[25px] font-bold">acima de R$ 150.000</p>
-                </div>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={0.4}>
-              <div className="text-white">
-                <h4 className="text-[35px] font-bold mb-6 tracking-[-0.01em]">Incluindo:</h4>
-                <ul className="space-y-4 text-[20px] font-bold list-none">
-                  <li>✓ Auditorias completas</li>
-                  <li>✓ Plano de crescimento (12 meses)</li>
-                  <li>✓ Ações priorizadas</li>
-                  <li>✓ Materiais prontos para uso</li>
-                </ul>
-              </div>
-            </FadeIn>
-
+    <section className="w-full bg-white py-24 font-['Plus_Jakarta_Sans']">
+      <div className="mx-auto max-w-[1220px] px-4 md:px-0">
+        {/* Container Principal (Rectangle 12352) */}
+        <div className="relative flex h-auto min-h-[450px] w-full flex-col items-start bg-[#6767F1] p-8 md:flex-row md:p-0">
+          {/* Valor Total Estimado */}
+          <div className="mb-8 space-y-1 md:absolute md:left-[45px] md:top-[122px] md:mb-0">
+            <p className="text-[25px] font-normal leading-[34px] text-white opacity-80">
+              Valor total estimado:
+            </p>
+            <h3 className="text-[32px] font-bold text-white">R$ 80.000</h3>
           </div>
-        </div>
 
-        {/* Borda Preta (Rectangle 12354) — pixel-perfect do Figma */}
-        <FadeIn delay={0.6} direction="left">
-          <div className="absolute w-[378px] h-[480px] left-[792px] top-[50px] border-[4px] border-[#1D1D1D] z-20 flex items-center justify-center">
-            <h2 className="text-white text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-center">
-              Valor dos<br />Entregáveis
+          {/* Seção Incluindo (Centro) */}
+          <div className="mb-8 max-w-[378px] md:absolute md:left-[460px] md:top-[122px] md:mb-0">
+            <h4 className="mb-6 text-[35px] font-bold leading-[32px] tracking-[-0.01em] text-white">
+              Incluindo:
+            </h4>
+            <ul className="list-none space-y-4 text-[20px] font-bold text-white">
+              <li className="flex items-start gap-2">✓ Auditorias completas</li>
+              <li className="flex items-start gap-2">
+                ✓ Plano de crescimento{" "}
+                <span className="text-[14px] font-normal opacity-80">(12 meses)</span>
+              </li>
+              <li className="flex items-start gap-2">✓ Ações priorizadas</li>
+              <li className="flex items-start gap-2">✓ Materiais prontos para uso</li>
+            </ul>
+          </div>
+
+          {/* Valor Percebido */}
+          <div className="md:absolute md:left-[45px] md:top-[240px]">
+            <p className="text-[25px] font-normal leading-[34px] text-white opacity-80">
+              Valor percebido:
+            </p>
+            <h3 className="text-[32px] font-bold text-white">acima de R$ 150.000</h3>
+          </div>
+
+          {/* A CAIXA BRANCA (Rectangle 12354) */}
+          <div className="z-10 flex h-[480px] w-full items-center justify-center border-[4px] border-[#1D1D1D] bg-transparent p-8 shadow-xl md:absolute md:left-[792px] md:top-[50px] md:w-[378px]">
+            <h2 className="text-left text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-white">
+              Valor dos
+              <br />
+              Entregáveis
             </h2>
           </div>
-        </FadeIn>
-
+        </div>
+        {/* Compensação do overflow para o layout da página */}
+        <div className="hidden h-[100px] md:block" />
       </div>
     </section>
   );

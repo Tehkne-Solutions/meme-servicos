@@ -28,7 +28,7 @@ const initialFormData: LeadFormData = {
 };
 
 const sharedInputClasses =
-  "w-full h-[65px] border-2 border-[#6C5CE7] bg-white px-6 text-[18px] text-[#1A1A1A] outline-none transition-all placeholder:text-[18px] placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
+  "w-full h-[65px] border-2 border-[#6767F1] bg-white px-6 text-[18px] text-[#1A1A1A] outline-none transition-all placeholder:text-[18px] placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6767F1]/20";
 
 const variantCopy = {
   hero: {
@@ -108,7 +108,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
 
   const copy = variantCopy[variant];
   const buttonClassName =
-    "cta-premium mt-2 flex min-h-[75px] w-full items-center justify-center bg-[#80D509] px-6 text-center text-[20px] font-black uppercase leading-tight text-white shadow-md hover:brightness-105 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
+    "cta-premium mt-2 flex h-[80px] w-full items-center justify-center bg-[#80D509] px-6 text-center text-[20px] font-black uppercase leading-tight text-white shadow-md hover:brightness-105 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
 
   const messageClassName =
     variant === "footer"

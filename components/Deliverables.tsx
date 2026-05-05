@@ -1,63 +1,54 @@
 import React from "react";
 
-const deliverables = [
-  "Auditorias completas",
-  "Plano de crescimento",
-  "Ações priorizadas",
-  "Materiais prontos para uso",
-];
-
 const Deliverables = () => {
   return (
-    <section className="w-full bg-white py-32 font-sans">
-      <div className="mx-auto max-w-[1320px] px-8 lg:px-12">
-        <div className="relative flex min-h-[500px] items-center bg-[#6C5CE7] p-12 lg:p-16">
-          <div className="flex w-full flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
-            {/* Coluna de Valores (Esquerda) */}
-            <div className="flex flex-col justify-between space-y-16 text-white md:space-y-24">
-              <div className="space-y-2">
-                <p className="text-[20px] font-medium opacity-90">Valor total estimado:</p>
-                <h3 className="text-[40px] font-bold leading-none">R$ 80.000</h3>
-              </div>
-              <div className="space-y-2">
-                <p className="text-[20px] font-medium opacity-90">Valor percebido:</p>
-                <h3 className="text-[40px] font-bold leading-none">acima de R$ 150.000</h3>
-              </div>
-            </div>
+    <section className="w-full bg-white py-24 font-['Plus_Jakarta_Sans']">
+      <div className="mx-auto max-w-[1220px] px-4 md:px-0">
+        {/* Container Principal (Rectangle 12352) */}
+        <div className="relative flex h-auto min-h-[450px] w-full flex-col items-start bg-[#6767F1] p-8 md:flex-row md:p-0">
+          {/* Valor Total Estimado (Posicionamento relativo ao container azul) */}
+          <div className="mb-8 space-y-1 md:absolute md:left-[45px] md:top-[122px] md:mb-0">
+            <p className="text-[25px] font-normal leading-[34px] text-white opacity-80">
+              Valor total estimado:
+            </p>
+            <h3 className="text-[32px] font-bold text-white">R$ 80.000</h3>
+          </div>
 
-            {/* Coluna da Lista (Centro) */}
-            <div className="flex-1 text-white lg:pl-16">
-              <h4 className="mb-8 text-[28px] font-bold uppercase tracking-tight">Incluindo:</h4>
-              <ul className="space-y-5 text-[18px]">
-                {deliverables.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 font-bold">✓</span>
-                    {item === "Plano de crescimento" ? (
-                      <span>
-                        {item} <span className="text-[16px] opacity-80">(12 meses)</span>
-                      </span>
-                    ) : (
-                      <span>{item}</span>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Seção Incluindo (Centro) */}
+          <div className="mb-8 max-w-[378px] md:absolute md:left-[382px] md:top-[122px] md:mb-0">
+            <h4 className="mb-6 text-[35px] font-bold leading-[32px] tracking-[-0.01em] text-white">
+              Incluindo:
+            </h4>
+            <ul className="list-none space-y-4 text-[20px] font-bold text-white">
+              <li className="flex items-start gap-2">✓ Auditorias completas</li>
+              <li className="flex items-start gap-2">
+                ✓ Plano de crescimento{" "}
+                <span className="text-[14px] font-normal opacity-80">(12 meses)</span>
+              </li>
+              <li className="flex items-start gap-2">✓ Ações priorizadas</li>
+              <li className="flex items-start gap-2">✓ Materiais prontos para uso</li>
+            </ul>
+          </div>
 
-            {/* Espaçador para o Card Absoluto no Desktop */}
-            <div className="hidden w-[380px] lg:block" />
+          {/* Valor Percebido */}
+          <div className="md:absolute md:left-[45px] md:top-[240px]">
+            <p className="text-[25px] font-normal leading-[34px] text-white opacity-80">
+              Valor percebido:
+            </p>
+            <h3 className="text-[32px] font-bold text-white">acima de R$ 150.000</h3>
+          </div>
 
-            {/* Card Lateral (Design Fiel: Retângulo vertical com borda vazando) */}
-            <div className="z-10 w-full max-w-[380px] md:absolute md:-bottom-24 md:right-12 lg:right-16">
-              <div className="absolute -bottom-4 -right-4 h-full w-full border-[3px] border-black bg-white" />
-              <div className="relative flex h-[520px] flex-col justify-center border-[3px] border-black bg-[#6C5CE7] p-12">
-                <h2 className="text-left text-[50px] font-black uppercase leading-[1.05] text-white lg:text-[64px]">
-                  Valor dos<br />Entregáveis
-                </h2>
-              </div>
-            </div>
+          {/* A CAIXA BRANCA (Rectangle 12354) - Overflow calculado conforme o Figma */}
+          <div className="z-10 flex h-[480px] w-full items-center justify-center border-[4px] border-[#1D1D1D] bg-white p-8 shadow-xl md:absolute md:left-[792px] md:top-[50px] md:w-[378px]">
+            <h2 className="text-left text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-[#6767F1]">
+              Valor dos
+              <br />
+              Entregáveis
+            </h2>
           </div>
         </div>
+        {/* Compensação do overflow para o layout da página */}
+        <div className="hidden h-[100px] md:block" />
       </div>
     </section>
   );

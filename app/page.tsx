@@ -8,6 +8,7 @@ import FAQ from "@/components/FAQ";
 import AcquisitionSection from "@/components/AcquisitionSection";
 import MartechSection from "@/components/Martech";
 import DiferenciaisSection from "@/components/DiferenciaisSection";
+import NossoEcossistema from "@/components/NossoEcossistema";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <MartechSection />
       <AcquisitionSection />
       <DiferenciaisSection />
+      <NossoEcossistema />
       <Footer />
     </main>
   );

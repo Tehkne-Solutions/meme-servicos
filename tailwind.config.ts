@@ -11,7 +11,7 @@ const config: Config = {
         success: "#80D509",    // O verde do botão de proposta
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Plus Jakarta Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         jakarta: ["Plus Jakarta Sans", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],

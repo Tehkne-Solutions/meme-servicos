@@ -8,35 +8,37 @@ const AcquisitionSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-24 font-['Plus_Jakarta_Sans'] overflow-hidden">
+    <section className="w-full bg-white py-24 overflow-hidden">
       <div className="max-w-[1336px] mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* LADO ESQUERDO: DIAGRAMA (Corrigido para mimetizar o Figma) */}
+        {/* LADO ESQUERDO: DIAGRAMA (Ajustado para fidelidade total) */}
         <div className="flex flex-col items-center lg:items-start">
-          <h4 className="text-[28px] font-bold text-[#1A1A1A] mb-8 self-center lg:self-start ml-0 lg:ml-20">
+          <h4 className="font-sans font-bold text-[30px] text-[#1A1A1A] mb-10 self-center lg:self-start leading-tight">
             Aquisição de Leads:
           </h4>
           
-          <div className="flex flex-col gap-6">
+          {/* gap-8 fornece aproximadamente 32px de espaçamento vertical entre os blocos */}
+          <div className="flex flex-col gap-8 w-full max-w-[550px]">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex items-center">
-                {/* Card Esquerdo */}
-                <div className="w-[220px] h-[90px] border-[1.5px] border-[#FF1E5B] flex items-center justify-center px-4 bg-white">
-                  <span className="font-['Poppins'] font-medium text-[18px] text-[#FF1E5B] text-center leading-tight">
+              <div key={idx} className="flex items-center justify-center lg:justify-start">
+                
+                {/* Bloco Esquerdo - Fonte aumentada para 21px e forçada Poppins/Sans */}
+                <div className="w-[246px] h-[97px] border-[2px] border-[#FF1E5B] flex items-center justify-center px-6 bg-white shrink-0">
+                  <span className="font-sans font-medium text-[21px] text-[#FF1E5B] text-center leading-[1.2] tracking-tight">
                     {step.left}
                   </span>
                 </div>
                 
-                {/* Seta Centralizada (O elemento que faltava) */}
-                <div className="w-[50px] h-[50px] bg-[#6767F1] flex items-center justify-center z-10 -mx-[25px] shadow-lg">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                {/* Seta Central - Corrigida para sobreposição exata */}
+                <div className="w-[60px] h-[60px] bg-[#6767F1] flex items-center justify-center z-10 -mx-[30px] shadow-lg shrink-0">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 
-                {/* Card Direito */}
-                <div className="w-[220px] h-[90px] border-[1.5px] border-[#FF1E5B] flex items-center justify-center px-4 bg-white">
-                  <span className="font-['Poppins'] font-medium text-[18px] text-[#FF1E5B] text-center leading-tight">
+                {/* Bloco Direito - Fonte aumentada para 21px e forçada Poppins/Sans */}
+                <div className="w-[245px] h-[97px] border-[2px] border-[#FF1E5B] flex items-center justify-center px-6 bg-white shrink-0">
+                  <span className="font-sans font-medium text-[21px] text-[#FF1E5B] text-center leading-[1.2] tracking-tight">
                     {step.right}
                   </span>
                 </div>
@@ -45,17 +47,17 @@ const AcquisitionSection = () => {
           </div>
         </div>
 
-        {/* LADO DIREITO: TEXTO E CTA */}
+        {/* LADO DIREITO: CONTEÚDO */}
         <div className="flex flex-col items-end text-right">
-          <h2 className="text-[48px] lg:text-[56px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
+          <h2 className="font-sans text-[48px] lg:text-[62px] font-bold text-[#1A1A1A] leading-[1.1] mb-6">
             Processo de Aquisição <br /> de Leads + Funil de Vendas
           </h2>
           
-          <p className="text-[18px] text-[#1A1A1A]/70 mb-10 max-w-[400px]">
+          <p className="font-sans text-[20px] text-[#1A1A1A]/70 mb-10 max-w-[450px]">
             Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
           </p>
           
-          <button className="bg-[#80D509] hover:bg-[#72be08] text-white px-10 py-5 text-[18px] font-bold uppercase transition-colors shadow-xl">
+          <button className="bg-[#80D509] hover:bg-[#72be08] text-white px-12 py-6 text-[20px] font-bold uppercase transition-all shadow-[0_10px_20px_rgba(128,213,9,0.3)]">
             Solicitar Proposta
           </button>
         </div>

@@ -18,9 +18,14 @@ export default function FooterCTA() {
             <input className="input" placeholder="Empresa" />
             <input className="input" placeholder="Email" />
             <input className="input" placeholder="Telefone" />
-            <button className="md:col-span-2 bg-green text-dark py-4 rounded-card font-semibold hover:opacity-90 transition">
+            <motion.button
+              className="btn-premium md:col-span-2 py-4 text-body"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
               QUERO MEU MAPA ESTRATÉGICO
-            </button>
+            </motion.button>
           </form>
         </div>
       </div>

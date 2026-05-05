@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import { motion } from "framer-motion";
 
 type LeadFormVariant = "hero" | "footer";
 
@@ -191,9 +192,16 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         />
       </div>
 
-      <button className={buttonClassName} disabled={status === "submitting"} type="submit">
+      <motion.button
+        className={buttonClassName}
+        disabled={status === "submitting"}
+        type="submit"
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      >
         {status === "submitting" ? "Enviando..." : submitLabel}
-      </button>
+      </motion.button>
 
       <div aria-live="polite">
         {status === "success" && (

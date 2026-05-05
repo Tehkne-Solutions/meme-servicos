@@ -50,12 +50,15 @@ export default function DiferenciaisSection() {
             ))}
           </div>
 
-          <a
+          <motion.a
             href="#contato"
-            className="cta-premium shrink-0 bg-[#FF1E5B] px-8 py-4 text-[18px] font-bold text-white hover:bg-[#E61A52] hover:shadow-[0_15px_30px_rgba(255,30,91,0.28)]"
+            className="btn-premium shrink-0 px-8 py-4 text-[18px] font-bold"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
             Entender como trabalhamos
-          </a>
+          </motion.a>
         </div>
 
         <div className="w-full border-t border-gray-100 pt-12">

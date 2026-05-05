@@ -37,12 +37,15 @@ const Method = () => {
                 Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
               </p>
             </div>
-            <a
+            <motion.a
               href="#contato"
-              className="btn-premium inline-flex w-full items-center justify-center bg-[#6C5CE7] px-10 py-4 text-[18px] font-semibold uppercase tracking-wider text-white lg:w-auto"
+              className="btn-premium inline-flex w-full items-center justify-center px-10 py-4 text-[18px] font-semibold uppercase tracking-wider lg:w-auto"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
               Fale com um especialista agora
-            </a>
+            </motion.a>
           </div>
         </FadeIn>
 

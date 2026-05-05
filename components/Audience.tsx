@@ -27,12 +27,15 @@ export default function Audience() {
         <p className="mb-10 text-[22px] leading-[32px] tracking-[-0.01em] text-[#1A1A1A]">
           Para empresas que faturam a partir de R$ 70 mil/mês e querem:
         </p>
-        <a
+        <motion.a
           href="#contato"
-          className="cta-premium flex h-[70px] w-full items-center justify-center bg-[#FF1E5B] text-[16px] font-semibold uppercase tracking-wider text-white hover:brightness-110 hover:shadow-[0_15px_30px_rgba(255,30,91,0.28)]"
+          className="btn-premium flex h-[70px] w-full items-center justify-center text-[16px] font-semibold uppercase tracking-wider"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           Falar com um Especialista
-        </a>
+        </motion.a>
       </div>
 
       <div className="grid flex-[2] grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2 xl:gap-x-24">

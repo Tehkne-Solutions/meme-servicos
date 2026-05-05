@@ -15,7 +15,7 @@ const Deliverables = () => {
           </div>
 
           {/* Seção Incluindo (Centro) */}
-          <div className="mb-8 max-w-[378px] md:absolute md:left-[382px] md:top-[122px] md:mb-0">
+          <div className="mb-8 max-w-[378px] md:absolute md:left-[460px] md:top-[122px] md:mb-0">
             <h4 className="mb-6 text-[35px] font-bold leading-[32px] tracking-[-0.01em] text-white">
               Incluindo:
             </h4>
@@ -39,8 +39,8 @@ const Deliverables = () => {
           </div>
 
           {/* A CAIXA BRANCA (Rectangle 12354) - Overflow calculado conforme o Figma */}
-          <div className="z-10 flex h-[480px] w-full items-center justify-center border-[4px] border-[#1D1D1D] bg-white p-8 shadow-xl md:absolute md:left-[792px] md:top-[50px] md:w-[378px]">
-            <h2 className="text-left text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-[#6767F1]">
+          <div className="z-10 flex h-[480px] w-full items-center justify-center border-[4px] border-[#1D1D1D] bg-transparent p-8 shadow-xl md:absolute md:left-[792px] md:top-[50px] md:w-[378px]">
+            <h2 className="text-left text-[50px] font-bold leading-[63px] tracking-[-0.03em] text-white">
               Valor dos
               <br />
               Entregáveis

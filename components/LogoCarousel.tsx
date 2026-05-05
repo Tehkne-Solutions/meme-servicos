@@ -17,28 +17,24 @@ export const LogoCarousel = () => {
   const finalLogos = [...logos, ...logos, ...logos];
 
   return (
-    <div className="w-full py-12 bg-white overflow-hidden">
+    <div className="w-full py-24 bg-white overflow-hidden border-y border-gray-100">
       <div className="relative flex overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-[150px] before:bg-gradient-to-r before:from-white before:to-transparent after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-[150px] after:bg-gradient-to-l after:from-white after:to-transparent">
         <motion.div
-          className="flex flex-nowrap items-center"
+          className="flex flex-nowrap items-center gap-32"
           animate={{ x: ["0%", "-33.33%"] }}
           transition={{
             ease: "linear",
-            duration: 25,
+            duration: 30,
             repeat: Infinity,
           }}
         >
           {finalLogos.map((logo, index) => (
-            <div
+            <img
               key={index}
-              className="flex-shrink-0 w-[250px] h-[100px] flex items-center justify-center px-10 group"
-            >
-              <img
-                src={logo.src}
-                alt={logo.alt}
-                className="h-12 w-auto object-contain opacity-50 grayscale transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-110"
-              />
-            </div>
+              src={logo.src}
+              alt={logo.alt}
+              className="h-32 w-auto object-contain flex-shrink-0 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
           ))}
         </motion.div>
       </div>

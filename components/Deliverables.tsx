@@ -11,7 +11,6 @@ const Deliverables = () => {
         <div className="absolute inset-0 bg-[#6767F1] flex items-center px-16 z-10">
           <div className="grid grid-cols-3 w-full items-center gap-8">
 
-            {/* Esquerda: Valores */}
             <FadeIn delay={0.2}>
               <div className="text-white space-y-10">
                 <div>
@@ -25,7 +24,6 @@ const Deliverables = () => {
               </div>
             </FadeIn>
 
-            {/* Centro: Incluindo */}
             <FadeIn delay={0.4}>
               <div className="text-white">
                 <h4 className="text-[35px] font-bold mb-6">Incluindo:</h4>
@@ -38,10 +36,9 @@ const Deliverables = () => {
               </div>
             </FadeIn>
 
-            {/* Direita: Fundo transparente, fonte branca */}
             <FadeIn delay={0.6} direction="left">
-              <div className="text-right">
-                <h2 className="text-white text-[55px] font-bold leading-[1.1] tracking-[-0.03em]">
+              <div className="flex justify-end">
+                <h2 className="text-white text-[55px] font-bold leading-[1.1] text-right tracking-[-0.03em]">
                   Valor dos<br />Entregáveis
                 </h2>
               </div>
@@ -50,8 +47,8 @@ const Deliverables = () => {
           </div>
         </div>
 
-        {/* Borda Preta Decorativa (Rectangle 12354) — flutuante, fora do roxo */}
-        <div className="absolute right-[-20px] top-[40px] w-[390px] h-[490px] border-[4px] border-[#1D1D1D] z-0 pointer-events-none" />
+        {/* Borda Preta Decorativa — z-20 na frente do roxo */}
+        <div className="absolute right-[-15px] top-[45px] w-[378px] h-[480px] border-[4px] border-[#1D1D1D] z-20 pointer-events-none" />
       </div>
     </section>
   );

@@ -7,10 +7,6 @@ import Method from "@/components/Method";
 import FAQ from "@/components/FAQ";
 import AcquisitionSection from "@/components/AcquisitionSection";
 import MartechSection from "@/components/Martech";
-import LeadsProcess from "@/components/LeadsProcess";
-import Differentials from "@/components/Differentials";
-import Ecosystem from "@/components/Ecosystem";
-import FooterCTA from "@/components/FooterCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -23,12 +19,8 @@ export default function Home() {
       <Deliverables />
       <FAQ />
       <Method />
-      <AcquisitionSection />
       <MartechSection />
-      <LeadsProcess />
-      <Differentials />
-      <Ecosystem />
-      <FooterCTA />
+      <AcquisitionSection />
       <Footer />
     </main>
   );

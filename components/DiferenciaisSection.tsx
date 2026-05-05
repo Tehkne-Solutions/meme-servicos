@@ -1,13 +1,14 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { LogoCarousel } from "./LogoCarousel";
 
 const tags = [
-  "Profundidade real personalizaÃ§Ã£o total",
-  "Ativos reais e nÃ£o sÃ³ anÃ¡lises",
-  "Equipe sÃªnior meme7",
-  "EstratÃ©gia + execuÃ§Ã£o",
+  "Profundidade real personalização total",
+  "Ativos reais e não só análises",
+  "Equipe sênior meme7",
+  "Estratégia + execução",
   "Foco direto em faturamento",
 ];
 
@@ -63,19 +64,9 @@ export default function DiferenciaisSection() {
             Entender como trabalhamos
           </motion.a>
         </div>
-
-        <div className="w-full border-t border-gray-100 pt-12">
-          <div className="relative h-[54px] w-full md:h-[80px]">
-            <Image
-              src="/images/meme-digital-diferenciais-3-clientes.png"
-              alt="Logos de clientes da Meme Digital"
-              fill
-              sizes="100vw"
-              className="object-contain"
-            />
-          </div>
-        </div>
       </div>
+
+      <LogoCarousel />
     </section>
   );
 }

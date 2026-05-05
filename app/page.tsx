@@ -1,4 +1,4 @@
-﻿import Hero from "@/components/Hero";
+import Hero from "@/components/Hero";
 import StrategicMap from "@/components/StrategicMap";
 import Audience from "@/components/Audience";
 import Timeline30Days from "@/components/Timeline30Days";
@@ -10,37 +10,22 @@ import MartechSection from "@/components/Martech";
 import DiferenciaisSection from "@/components/DiferenciaisSection";
 import NossoEcossistema from "@/components/NossoEcossistema";
 import Footer from "@/components/Footer";
-import { LogoCarousel } from "@/components/LogoCarousel";
-import { FadeIn } from "@/components/MotionWrapper";
-import dynamic from "next/dynamic";
-import { Header } from "@/components/Header";
-
-const SmoothScroll = dynamic(
-  () => import("@/components/SmoothScroll").then((mod) => mod.SmoothScroll),
-  { ssr: false }
-);
 
 export default function Home() {
   return (
-    <SmoothScroll>
-      <Header />
-      <main className="bg-white">
-        <Hero />
-        <FadeIn delay={0.2}>
-          <LogoCarousel />
-        </FadeIn>
-        <StrategicMap />
-        <Audience />
-        <Timeline30Days />
-        <Deliverables />
-        <FAQ />
-        <Method />
-        <MartechSection />
-        <AcquisitionSection />
-        <DiferenciaisSection />
-        <NossoEcossistema />
-        <Footer />
-      </main>
-    </SmoothScroll>
+    <main className="bg-white">
+      <Hero />
+      <StrategicMap />
+      <Audience />
+      <Timeline30Days />
+      <Deliverables />
+      <FAQ />
+      <Method />
+      <MartechSection />
+      <AcquisitionSection />
+      <DiferenciaisSection />
+      <NossoEcossistema />
+      <Footer />
+    </main>
   );
 }

@@ -6,27 +6,18 @@ import LeadCaptureForm from "./LeadCaptureForm";
 
 export default function Footer() {
   return (
-    <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-24 font-sans">
-      <div className="mx-auto flex max-w-[1320px] flex-col items-center gap-16 px-8 lg:flex-row lg:px-12">
+    <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-24 text-white font-['Plus_Jakarta_Sans']">
+      <div className="mx-auto max-w-[1220px] px-6 flex flex-col md:flex-row justify-between items-start gap-20">
+
         <FadeIn delay={0.2}>
-          <div className="w-full text-white lg:w-1/2">
-            <h2 className="mb-8 text-[56px] font-bold leading-[1.1] lg:text-[64px]">
-              Conectamos
-              <br />
-              Pessoas e
-              <br />
-              Negócios no
-              <br />
-              Digital
+          <div className="w-full md:w-[550px]">
+            <h2 className="text-[50px] font-bold leading-[1.1] mb-8">
+              Conectamos Pessoas e Negócios no Digital
             </h2>
-
-            <p className="mb-12 max-w-[500px] text-[20px] font-light leading-relaxed opacity-90">
-              Somos uma agência <span className="font-semibold uppercase">MARTECH</span> de
-              marketing digital e tecnologia dedicada a proporcionar boas experiências de usuário e
-              impulsionar altas taxas de conversão no B2B e B2C.
+            <p className="text-white/70 text-[20px] leading-relaxed">
+              Somos uma agência MARTECH que une tecnologia e estratégia para transformar sua presença online em faturamento real.
             </p>
-
-            <div className="relative h-[61px] w-[196px]">
+            <div className="relative h-[61px] w-[196px] mt-12">
               <Image
                 src="/images/meme-digital-logo-rodape.png"
                 alt="Meme Digital"
@@ -38,13 +29,14 @@ export default function Footer() {
         </FadeIn>
 
         <FadeIn delay={0.4} direction="left">
-          <div className="w-full max-w-[614px] rounded-sm bg-white p-10 shadow-2xl lg:p-14">
+          <div className="flex-1 w-full max-w-[600px] bg-white p-10">
             <LeadCaptureForm
               variant="footer"
               submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÓCIO"
             />
           </div>
         </FadeIn>
+
       </div>
     </footer>
   );

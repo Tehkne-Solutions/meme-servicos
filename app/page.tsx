@@ -7,6 +7,7 @@ import Method from "@/components/Method";
 import FAQ from "@/components/FAQ";
 import AcquisitionSection from "@/components/AcquisitionSection";
 import MartechSection from "@/components/Martech";
+import DiferenciaisSection from "@/components/DiferenciaisSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Method />
       <MartechSection />
       <AcquisitionSection />
+      <DiferenciaisSection />
       <Footer />
     </main>
   );

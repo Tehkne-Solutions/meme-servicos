@@ -15,16 +15,16 @@ const AcquisitionSection = () => {
             Aquisição de Leads:
           </h4>
 
-          <div className="flex w-full max-w-[580px] flex-col gap-y-[30px]">
+          <div className="flex w-full max-w-[583px] flex-col gap-y-[30px]">
             {steps.map((step, idx) => (
-              <div key={idx} className="flex items-center justify-center">
+              <div key={idx} className="flex items-center justify-center gap-x-4">
                 <div className="flex h-[97px] w-[246px] shrink-0 items-center justify-center border-[2px] border-[#FF1E5B] bg-white px-4">
                   <span className="font-sans text-center text-[20px] font-medium leading-tight text-[#FF1E5B]">
                     {step.left}
                   </span>
                 </div>
 
-                <div className="z-10 -mx-[30px] flex h-[60px] w-[60px] shrink-0 items-center justify-center bg-[#6767F1] shadow-lg">
+                <div className="z-10 flex h-[60px] w-[60px] shrink-0 items-center justify-center bg-[#6767F1] shadow-lg">
                   <svg
                     width="24"
                     height="24"

@@ -12,8 +12,12 @@ import NossoEcossistema from "@/components/NossoEcossistema";
 import Footer from "@/components/Footer";
 import { LogoCarousel } from "@/components/LogoCarousel";
 import { FadeIn } from "@/components/MotionWrapper";
-import { SmoothScroll } from "@/components/SmoothScroll";
+import dynamic from "next/dynamic";
 import { Header } from "@/components/Header";
+
+const SmoothScroll = dynamic(() => import("@/components/SmoothScroll"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

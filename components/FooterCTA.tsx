@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function FooterCTA() {
   return (
     <section className="py-section bg-dark text-white">

@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const benefits = [
   {
     icon: "/images/meme-digital-para-quem-e-icone-crescer-com-estrutura.png",

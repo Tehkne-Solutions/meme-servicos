@@ -15,17 +15,17 @@ const tags = [
 
 export default function DiferenciaisSection() {
   return (
-    <section className="w-full bg-white py-20 font-sans">
-      <div className="mx-auto w-full max-w-[1320px] px-6 lg:px-8">
+    <section className="w-full py-24 bg-white font-sans">
+      <div className="mx-auto max-w-[1220px] px-6 text-center">
         <FadeIn delay={0.2}>
-          <h2 className="mb-12 text-[40px] font-bold leading-[1.05] text-[#1A1A1A] md:text-[56px]">
+          <h2 className="text-[45px] font-bold mb-16 text-[#1A1A1A]">
             Diferenciais Meme Digital
           </h2>
         </FadeIn>
 
-        <div className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-          <FadeIn delay={0.3}>
-            <div className="relative h-[320px] overflow-hidden rounded-sm md:col-span-2 md:h-[450px]">
+        <FadeIn delay={0.3}>
+          <div className="flex justify-center gap-6 mb-12">
+            <div className="relative w-full max-w-[780px] aspect-[16/9] overflow-hidden">
               <Image
                 src="/images/meme-digital-diferenciais-1.png"
                 alt="Profissional da Meme Digital em ambiente de trabalho"
@@ -34,10 +34,7 @@ export default function DiferenciaisSection() {
                 className="object-cover"
               />
             </div>
-          </FadeIn>
-
-          <FadeIn delay={0.45} direction="left">
-            <div className="relative h-[320px] overflow-hidden rounded-sm md:h-[450px]">
+            <div className="relative w-full max-w-[380px] aspect-[9/16] overflow-hidden">
               <Image
                 src="/images/meme-digital-diferenciais-2.png"
                 alt="Profissional da Meme Digital utilizando tablet"
@@ -46,12 +43,12 @@ export default function DiferenciaisSection() {
                 className="object-cover"
               />
             </div>
-          </FadeIn>
-        </div>
+          </div>
+        </FadeIn>
 
-        <FadeIn delay={0.3}>
-          <div className="mb-20 flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-            <div className="flex max-w-[900px] flex-wrap gap-3">
+        <FadeIn delay={0.4}>
+          <div className="mb-16 flex flex-col items-center justify-between gap-8 md:flex-row md:items-center">
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
               {tags.map((tag) => (
                 <div
                   key={tag}

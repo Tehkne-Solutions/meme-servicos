@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+﻿import Hero from "@/components/Hero";
 import StrategicMap from "@/components/StrategicMap";
 import Audience from "@/components/Audience";
 import Timeline30Days from "@/components/Timeline30Days";
@@ -15,9 +15,10 @@ import { FadeIn } from "@/components/MotionWrapper";
 import dynamic from "next/dynamic";
 import { Header } from "@/components/Header";
 
-const SmoothScroll = dynamic(() => import("@/components/SmoothScroll"), {
-  ssr: false,
-});
+const SmoothScroll = dynamic(
+  () => import("@/components/SmoothScroll").then((mod) => mod.SmoothScroll),
+  { ssr: false }
+);
 
 export default function Home() {
   return (

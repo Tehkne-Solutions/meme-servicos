@@ -9,7 +9,7 @@ const steps = [
 const AcquisitionSection = () => {
   return (
     <section className="w-full overflow-hidden bg-white py-24">
-      <div className="mx-auto grid max-w-[1336px] grid-cols-1 items-center gap-16 px-12 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-[1320px] grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-8">
         <div className="flex w-full flex-col items-center lg:items-start">
           <h4 className="mb-10 self-center font-sans text-[30px] font-bold leading-tight text-[#1A1A1A] lg:self-start">
             Aquisição de Leads:

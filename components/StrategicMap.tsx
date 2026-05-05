@@ -4,7 +4,7 @@ export default function StrategicMap() {
   return (
     <section className="relative bg-white">
       <div className="bg-[#FF1E5B] py-16 md:py-24">
-        <div className="mx-auto max-w-[1220px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1320px] px-6 lg:px-8">
           <div className="grid items-start gap-8 lg:grid-cols-[1fr_2fr]">
             <div className="border-4 border-white p-6">
               <h2 className="mb-4 font-jakarta text-3xl font-bold text-white md:text-4xl">
@@ -43,7 +43,7 @@ export default function StrategicMap() {
       </div>
 
       <div className="relative z-10 -mt-10">
-        <div className="mx-auto max-w-[1220px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1320px] px-6 lg:px-8">
           <div className="grid items-center gap-8 bg-white p-8 shadow-lg lg:grid-cols-[1fr_2fr]">
             <div className="border-4 border-[#6767F1] p-6">
               <h3 className="mb-6 font-jakarta text-2xl font-bold text-[#5C5C5C]">

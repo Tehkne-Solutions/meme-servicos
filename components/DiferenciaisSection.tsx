@@ -11,7 +11,7 @@ const tags = [
 export default function DiferenciaisSection() {
   return (
     <section className="w-full bg-white py-20 font-sans">
-      <div className="mx-auto max-w-[1336px] px-6 md:px-12">
+      <div className="mx-auto w-full max-w-[1320px] px-6 lg:px-8">
         <h2 className="mb-12 text-[40px] font-bold leading-[1.05] text-[#1A1A1A] md:text-[56px]">
           Diferenciais Meme Digital
         </h2>

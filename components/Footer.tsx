@@ -4,9 +4,9 @@ import LeadCaptureForm from "./LeadCaptureForm";
 export default function Footer() {
   return (
     <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-24 font-sans">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-12 px-8 lg:flex-row lg:px-[140px]">
+      <div className="mx-auto flex max-w-[1320px] flex-col items-center gap-16 px-8 lg:flex-row lg:px-12">
         <div className="w-full text-white lg:w-1/2">
-          <h2 className="mb-8 text-[64px] font-bold leading-[1.1]">
+          <h2 className="mb-8 text-[56px] font-bold leading-[1.1] lg:text-[64px]">
             Conectamos
             <br />
             Pessoas e
@@ -16,9 +16,10 @@ export default function Footer() {
             Digital
           </h2>
 
-          <p className="mb-12 max-w-[440px] text-[18px] font-light opacity-80">
-            Somos uma agência MARTECH dedicada a proporcionar boas experiências de usuário e
-            impulsionar conversões no B2B e B2C.
+          <p className="mb-12 max-w-[500px] text-[20px] font-light leading-relaxed opacity-90">
+            Somos uma agência <span className="font-semibold uppercase">MARTECH</span> de
+            marketing digital e tecnologia dedicada a proporcionar boas experiências de usuário e
+            impulsionar altas taxas de conversão no B2B e B2C.
           </p>
 
           <div className="relative h-[61px] w-[196px]">
@@ -31,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="w-full max-w-[614px] bg-white p-12 shadow-2xl md:p-16">
+        <div className="w-full max-w-[614px] rounded-sm bg-white p-10 shadow-2xl lg:p-14">
           <LeadCaptureForm
             variant="footer"
             submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÓCIO"

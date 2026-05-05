@@ -28,7 +28,33 @@ const initialFormData: LeadFormData = {
 };
 
 const sharedInputClasses =
-  "w-full rounded-none bg-white text-[15px] text-[#1A1A1A] outline-none transition-all placeholder:text-[#4D4D4D]";
+  "w-full border-2 border-[#6C5CE7] bg-white px-6 text-[17px] text-[#1A1A1A] outline-none transition-all placeholder:text-gray-400 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20";
+
+const variantCopy = {
+  hero: {
+    formClassName: "flex flex-col gap-4",
+    emailPlaceholder: "E-mail Corporativo",
+    phonePlaceholder: "WhatsApp",
+    sectorPlaceholder: "Setor",
+    revenuePlaceholder: "Faturamento",
+  },
+  footer: {
+    formClassName: "flex flex-col gap-5",
+    emailPlaceholder: "Qual seu e-mail corporativo?",
+    phonePlaceholder: "Telefone / WhatsApp",
+    sectorPlaceholder: "Setor de Atuação",
+    revenuePlaceholder: "Faturamento Mensal",
+  },
+} satisfies Record<
+  LeadFormVariant,
+  {
+    formClassName: string;
+    emailPlaceholder: string;
+    phonePlaceholder: string;
+    sectorPlaceholder: string;
+    revenuePlaceholder: string;
+  }
+>;
 
 export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps) {
   const [formData, setFormData] = useState<LeadFormData>(initialFormData);
@@ -77,15 +103,12 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
     }
   };
 
-  const inputClassName =
-    variant === "footer"
-      ? `${sharedInputClasses} h-[62px] border border-[#6C5CE7] px-6 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20`
-      : `${sharedInputClasses} h-[55px] border-[2px] border-[#6C5CE7] px-4 focus:bg-[#F8F7FF] focus:ring-2 focus:ring-[#6C5CE7]/20`;
-
+  const copy = variantCopy[variant];
+  const inputClassName = `${sharedInputClasses} h-[62px]`;
   const buttonClassName =
     variant === "footer"
-      ? "cta-premium mt-4 h-[65px] w-full bg-[#80D509] text-[15px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
-      : "cta-premium h-[65px] w-full bg-[#80D509] text-[15px] font-bold uppercase text-white hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
+      ? "cta-premium mt-4 h-[70px] w-full bg-[#80D509] text-[18px] font-black uppercase text-white shadow-md hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+      : "cta-premium h-[70px] w-full bg-[#80D509] text-[18px] font-black uppercase text-white shadow-xl hover:bg-[#8DEF0A] hover:shadow-[0_15px_30px_rgba(128,213,9,0.4)] disabled:cursor-not-allowed disabled:bg-gray-400 disabled:hover:translate-y-0 disabled:hover:shadow-none";
 
   const messageClassName =
     variant === "footer"
@@ -99,7 +122,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
         };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+    <form onSubmit={handleSubmit} className={copy.formClassName}>
       <input
         autoComplete="name"
         className={inputClassName}
@@ -113,10 +136,10 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
 
       <input
         autoComplete="email"
-        className={inputClassName}
+        className={`${inputClassName} uppercase`}
         name="email"
         onChange={handleChange}
-        placeholder="E-mail Corporativo"
+        placeholder={copy.emailPlaceholder}
         required
         type="email"
         value={formData.email}
@@ -139,7 +162,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
           className={inputClassName}
           name="telefone"
           onChange={handleChange}
-          placeholder="Telefone / WhatsApp"
+          placeholder={copy.phonePlaceholder}
           required
           type="tel"
           value={formData.telefone}
@@ -151,7 +174,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
           className={inputClassName}
           name="setor"
           onChange={handleChange}
-          placeholder="Setor de Atuação"
+          placeholder={copy.sectorPlaceholder}
           required
           type="text"
           value={formData.setor}
@@ -161,7 +184,7 @@ export default function LeadCaptureForm({ submitLabel, variant }: LeadFormProps)
           className={inputClassName}
           name="faturamento"
           onChange={handleChange}
-          placeholder="Faturamento Mensal"
+          placeholder={copy.revenuePlaceholder}
           required
           type="text"
           value={formData.faturamento}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import LeadCaptureForm from "./LeadCaptureForm";
@@ -13,15 +13,15 @@ export default function Footer() {
             <br />
             Pessoas e
             <br />
-            NegÃ³cios no
+            Negócios no
             <br />
             Digital
           </h2>
 
           <p className="mb-12 max-w-[500px] text-[20px] font-light leading-relaxed opacity-90">
-            Somos uma agÃªncia <span className="font-semibold uppercase">MARTECH</span> de
-            marketing digital e tecnologia dedicada a proporcionar boas experiÃªncias de usuÃ¡rio e
-            impulsionar altas taxas de conversÃ£o no B2B e B2C.
+            Somos uma agência <span className="font-semibold uppercase">MARTECH</span> de
+            marketing digital e tecnologia dedicada a proporcionar boas experiências de usuário e
+            impulsionar altas taxas de conversão no B2B e B2C.
           </p>
 
           <div className="relative h-[61px] w-[196px]">
@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="w-full max-w-[614px] rounded-sm bg-white p-10 shadow-2xl lg:p-14">
           <LeadCaptureForm
             variant="footer"
-            submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÃ“CIO"
+            submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÓCIO"
           />
         </div>
       </div>

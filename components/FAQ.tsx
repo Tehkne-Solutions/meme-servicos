@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { FadeIn } from "./MotionWrapper";
@@ -16,7 +16,7 @@ const FAQ = () => {
               <div className="flex h-[173px] flex-col justify-center bg-[#1A1A1A] p-8">
                 <h4 className="mb-2 text-[20px] font-semibold text-white">Quanto custa?</h4>
                 <p className="text-[16px] leading-[22px] text-white/80">
-                  Investimento sob consulta, com devoluÃ§Ã£o de 100%.
+                  Investimento sob consulta, com devolução de 100%.
                 </p>
               </div>
             </div>
@@ -40,7 +40,7 @@ const FAQ = () => {
               <div className="flex h-[173px] flex-col justify-center bg-[#1A1A1A] p-8">
                 <h4 className="mb-2 text-[20px] font-semibold text-white">Quem pode participar?</h4>
                 <p className="text-[16px] leading-[22px] text-white/80">
-                  Empresas com faturamento acima de R$ 70 mil/mÃªs.
+                  Empresas com faturamento acima de R$ 70 mil/mês.
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const FAQ = () => {
               <div className="flex h-[173px] flex-col justify-center bg-[#1A1A1A] p-8">
                 <h4 className="mb-2 text-[20px] font-semibold text-white">O que recebo?</h4>
                 <p className="text-[16px] leading-[22px] text-white/80">
-                  DiagnÃ³stico, CRM, materiais e plano de 12 meses.
+                  Diagnóstico, CRM, materiais e plano de 12 meses.
                 </p>
               </div>
               <div className="h-[183px] bg-[#6C5CE7]" />

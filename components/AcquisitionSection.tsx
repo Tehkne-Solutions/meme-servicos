@@ -1,12 +1,12 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { FadeIn } from "./MotionWrapper";
 
 const steps = [
-  { left: "Planejamento estratÃ©gico", right: "CriaÃ§Ã£o de landing pages" },
-  { left: "TrÃ¡fego pago segmentado", right: "IntegraÃ§Ã£o com CRM" },
-  { left: "NutriÃ§Ã£o automatizada", right: "Fechamento da venda" },
+  { left: "Planejamento estratégico", right: "Criação de landing pages" },
+  { left: "Tráfego pago segmentado", right: "Integração com CRM" },
+  { left: "Nutrição automatizada", right: "Fechamento da venda" },
 ];
 
 const AcquisitionSection = () => {
@@ -16,7 +16,7 @@ const AcquisitionSection = () => {
         <div className="flex w-full flex-col items-center lg:items-start">
           <FadeIn delay={0.2}>
             <h4 className="mb-10 self-center font-sans text-[30px] font-bold leading-tight text-[#1A1A1A] lg:self-start">
-              AquisiÃ§Ã£o de Leads:
+              Aquisição de Leads:
             </h4>
           </FadeIn>
 
@@ -62,7 +62,7 @@ const AcquisitionSection = () => {
         <div className="flex flex-col items-end text-right">
           <FadeIn delay={0.2}>
             <h2 className="mb-6 font-sans text-[48px] font-bold leading-[1.1] text-[#1A1A1A] lg:text-[62px]">
-              Processo de AquisiÃ§Ã£o <br /> de Leads + Funil de Vendas
+              Processo de Aquisição <br /> de Leads + Funil de Vendas
             </h2>
           </FadeIn>
 

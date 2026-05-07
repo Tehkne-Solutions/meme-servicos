@@ -10,11 +10,20 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1320px] flex-col items-start justify-between gap-12 px-6 md:flex-row lg:px-8">
         <FadeIn delay={0.2}>
           <div className="max-w-[550px] flex-1">
-            <h2 className="mb-8 text-[44px] font-bold leading-tight md:text-[58px]">
-              Conecte estratégia, execução e performance
+            <h2 className="mb-12 text-[44px] font-bold leading-[1.05] md:text-[64px]">
+              Conectamos
+              <br />
+              Pessoas e
+              <br />
+              Negócios no
+              <br />
+              Digital
             </h2>
-            <p className="mb-12 text-[18px] leading-relaxed opacity-90">
-              Preencha o formulário para iniciar a conversa com a Meme Digital.
+
+            <p className="mb-16 text-[18px] leading-relaxed opacity-90">
+              Somos uma agência <span className="font-bold">MARTECH</span> de marketing digital e
+              tecnologia dedicada a proporcionar boas experiências de usuário e impulsionar altas
+              taxas de conversão no B2B e B2C.
             </p>
             <div className="relative h-[61px] w-[196px]">
               <Image

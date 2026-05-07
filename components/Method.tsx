@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { FadeIn } from "./MotionWrapper";
 
 const pillars = [
@@ -80,12 +81,41 @@ export default function Method() {
             <h3 className="mb-6 text-[28px] font-bold">Como isso aparece no funil</h3>
             <div className="grid gap-4 md:grid-cols-4">
               {funnel.map((step, index) => (
-                <div key={step} className="flex items-center gap-4">
-                  <div className="flex min-h-[88px] flex-1 items-center justify-center border-2 border-white px-4 text-center text-[20px] font-bold">
+                <motion.div
+                  key={step}
+                  className="group flex items-center gap-4"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-80px" }}
+                  transition={{
+                    duration: 0.55,
+                    delay: 0.08 * index,
+                    ease: [0.21, 0.47, 0.32, 0.98],
+                  }}
+                >
+                  <motion.div
+                    className="flex min-h-[88px] flex-1 items-center justify-center border-2 border-white px-4 text-center text-[20px] font-bold transition-colors duration-300 group-hover:bg-white group-hover:text-[#6767F1]"
+                    whileHover={{ y: -6, scale: 1.03 }}
+                    transition={{ type: "spring", stiffness: 320, damping: 18 }}
+                  >
                     {step}
-                  </div>
-                  {index < funnel.length - 1 && <span className="hidden text-[30px] font-bold md:block">→</span>}
-                </div>
+                  </motion.div>
+
+                  {index < funnel.length - 1 && (
+                    <motion.span
+                      className="hidden text-[30px] font-bold md:block"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{
+                        duration: 1.6,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: index * 0.15,
+                      }}
+                    >
+                      →
+                    </motion.span>
+                  )}
+                </motion.div>
               ))}
             </div>
           </div>

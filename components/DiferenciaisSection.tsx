@@ -85,15 +85,17 @@ export default function DiferenciaisSection() {
                 {differentials[6].text}
               </p>
             </article>
-            <motion.a
-              href="#contato"
-              className="flex min-h-[170px] items-center justify-center bg-[#FF1E5B] px-10 py-5 text-center text-[18px] font-bold uppercase leading-tight text-white transition-all hover:brightness-110"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              Entender como trabalhamos
-            </motion.a>
+            <div className="flex items-center justify-start lg:justify-center">
+              <motion.a
+                href="#contato"
+                className="btn-premium cta-premium inline-flex h-[58px] items-center justify-center px-10 text-center text-[15px] font-bold uppercase text-white"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+              >
+                Entender como trabalhamos
+              </motion.a>
+            </div>
           </div>
         </FadeIn>
       </div>

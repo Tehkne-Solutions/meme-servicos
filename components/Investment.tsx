@@ -52,8 +52,8 @@ export default function Investment() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.35}>
-          <div className="w-full border-4 border-[#1D1D1D] p-7 md:p-9 lg:col-span-2">
+        <FadeIn delay={0.35} className="lg:col-span-2">
+          <div className="w-full border-4 border-[#1D1D1D] p-7 md:p-9">
             <h3 className="mb-8 text-[28px] font-bold text-[#1D1D1D]">Como definimos:</h3>
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {criteria.map((item) => (

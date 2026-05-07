@@ -16,9 +16,9 @@ export default function Hero() {
                 className="mb-8 h-12 w-auto"
               />
               <h1 className="text-[38px] font-bold leading-[1.08] tracking-tight sm:text-[48px] lg:text-[54px]">
-                <span className="block text-[#6C5CE7]">Tenha um time de marketing</span>
-                <span className="block text-[#6C5CE7]">completo sem montar</span>
-                <span className="mt-3 block text-[#4D4D4D]">uma equipe interna</span>
+                <span className="block text-[#6C5CE7]">Tenha um time de marketing completo</span>
+                <span className="block text-[#6C5CE7]">sem montar uma</span>
+                <span className="mt-3 block text-[#4D4D4D]">equipe interna</span>
                 <span className="block text-[#4D4D4D]">do zero</span>
               </h1>
               <p className="mt-8 text-[24px] leading-[34px] text-[#4D4D4D] md:text-[30px] md:leading-[40px]">

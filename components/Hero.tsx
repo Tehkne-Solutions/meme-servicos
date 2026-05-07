@@ -15,8 +15,13 @@ export default function Hero() {
                 alt="Meme Digital Logo"
                 className="mb-8 h-12 w-auto"
               />
-              <h1 className="text-[42px] font-bold leading-[1.08] tracking-tight text-[#4D4D4D] sm:text-[52px] lg:text-[64px]">
-                Tenha um time de marketing completo sem montar uma equipe interna do zero
+              <h1 className="text-[42px] font-bold leading-[1.08] tracking-tight sm:text-[52px] lg:text-[64px]">
+                <span className="block text-[#6C5CE7]">
+                  Tenha um time de marketing completo
+                </span>
+                <span className="block text-[#4D4D4D]">
+                  sem montar uma equipe interna do zero
+                </span>
               </h1>
               <p className="mt-8 text-[24px] leading-[34px] text-[#4D4D4D] md:text-[30px] md:leading-[40px]">
                 Estratégia, execução e performance integradas para gerar demanda, organizar o funil

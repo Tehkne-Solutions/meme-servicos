@@ -12,8 +12,8 @@ const results = [
 
 export default function SocialProof() {
   return (
-    <section className="bg-white">
-      <div className="bg-[#FF1E5B] py-16 text-white md:py-24">
+    <section className="bg-[#EEEEEE]">
+      <div className="bg-[#FF1E5B] pb-20 pt-16 text-white md:pb-24 md:pt-24">
         <div className="mx-auto grid w-full max-w-[1320px] gap-10 px-6 lg:grid-cols-[0.9fr_1.5fr] lg:px-8">
           <FadeIn delay={0.2}>
             <div className="border-4 border-white p-6">

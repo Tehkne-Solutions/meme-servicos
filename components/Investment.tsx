@@ -53,19 +53,19 @@ export default function Investment() {
         </FadeIn>
 
         <FadeIn delay={0.35}>
-          <div className="border-4 border-[#1D1D1D] p-7 lg:col-span-2">
-            <h3 className="mb-6 text-[28px] font-bold text-[#1D1D1D]">Como definimos:</h3>
-            <div className="grid gap-4 md:grid-cols-2">
+          <div className="w-full border-4 border-[#1D1D1D] p-7 md:p-9 lg:col-span-2">
+            <h3 className="mb-8 text-[28px] font-bold text-[#1D1D1D]">Como definimos:</h3>
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
               {criteria.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center bg-[#80D509] font-bold text-white">
                     ✓
                   </span>
-                  <p className="text-[18px] leading-relaxed text-[#4D4D4D]">{item}</p>
+                  <p className="text-[17px] leading-relaxed text-[#4D4D4D]">{item}</p>
                 </div>
               ))}
             </div>
-            <p className="mt-8 bg-[#F4F4F4] p-5 text-[18px] font-semibold leading-relaxed text-[#4D4D4D]">
+            <p className="mt-8 w-full bg-[#F4F4F4] p-6 text-[18px] font-semibold leading-relaxed text-[#4D4D4D]">
               O valor é definido após diagnóstico inicial, garantindo que a estrutura montada seja
               adequada ao seu momento e objetivo.
             </p>

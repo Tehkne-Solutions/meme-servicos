@@ -65,7 +65,7 @@ export default function DiferenciaisSection() {
         </FadeIn>
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {differentials.map((item, index) => (
+          {differentials.slice(0, 6).map((item, index) => (
             <FadeIn key={item.title} delay={0.25 + index * 0.08}>
               <article className="h-full border-2 border-[#6767F1] p-6">
                 <h3 className="text-[22px] font-bold leading-tight text-[#6767F1]">{item.title}</h3>
@@ -76,10 +76,18 @@ export default function DiferenciaisSection() {
         </div>
 
         <FadeIn delay={0.4}>
-          <div className="mt-10 flex justify-start">
+          <div className="mt-5 grid gap-5 lg:grid-cols-3">
+            <article className="h-full border-2 border-[#6767F1] p-6 lg:col-span-2">
+              <h3 className="text-[22px] font-bold leading-tight text-[#6767F1]">
+                {differentials[6].title}
+              </h3>
+              <p className="mt-4 text-[17px] leading-relaxed text-[#1A1A1A]/75">
+                {differentials[6].text}
+              </p>
+            </article>
             <motion.a
               href="#contato"
-              className="shrink-0 bg-[#FF1E5B] px-10 py-5 text-center text-[15px] font-bold uppercase text-white transition-all hover:brightness-110"
+              className="flex min-h-[170px] items-center justify-center bg-[#FF1E5B] px-10 py-5 text-center text-[18px] font-bold uppercase leading-tight text-white transition-all hover:brightness-110"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}

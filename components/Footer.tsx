@@ -6,16 +6,15 @@ import LeadCaptureForm from "./LeadCaptureForm";
 
 export default function Footer() {
   return (
-    <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-24 text-white font-['Plus_Jakarta_Sans']">
-      <div className="mx-auto max-w-[1320px] px-8 flex flex-col md:flex-row justify-between items-start gap-32">
-
+    <footer id="contato" className="w-full scroll-mt-20 bg-[#1A1A1A] py-20 font-['Plus_Jakarta_Sans'] text-white md:py-24">
+      <div className="mx-auto flex max-w-[1320px] flex-col items-start justify-between gap-12 px-6 md:flex-row lg:px-8">
         <FadeIn delay={0.2}>
-          <div className="flex-1 max-w-[550px]">
-            <h2 className="text-[64px] font-bold leading-[1.05] mb-12">
-              Conectamos<br />Pessoas e<br />Negócios no<br />Digital
+          <div className="max-w-[550px] flex-1">
+            <h2 className="mb-8 text-[44px] font-bold leading-tight md:text-[58px]">
+              Conecte estratégia, execução e performance
             </h2>
-            <p className="text-[18px] leading-relaxed mb-16 opacity-90">
-              Somos uma agência <span className="font-bold">MARTECH</span> de marketing digital e tecnologia dedicada a proporcionar boas experiências de usuário e impulsionar altas taxas de conversão no B2B e B2C.
+            <p className="mb-12 text-[18px] leading-relaxed opacity-90">
+              Preencha o formulário para iniciar a conversa com a Meme Digital.
             </p>
             <div className="relative h-[61px] w-[196px]">
               <Image
@@ -29,14 +28,10 @@ export default function Footer() {
         </FadeIn>
 
         <FadeIn delay={0.4} direction="left">
-          <div className="w-full md:w-[500px] bg-white p-12 shadow-2xl">
-            <LeadCaptureForm
-              variant="footer"
-              submitLabel="ENCONTRE OPORTUNIDADES PARA SEU NEGÓCIO"
-            />
+          <div className="w-full bg-white p-8 shadow-2xl md:w-[500px] md:p-12">
+            <LeadCaptureForm variant="footer" submitLabel="Quero estruturar meu marketing" />
           </div>
         </FadeIn>
-
       </div>
     </footer>
   );

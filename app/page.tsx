@@ -1,30 +1,34 @@
 import Hero from "@/components/Hero";
-import StrategicMap from "@/components/StrategicMap";
+import SocialProof from "@/components/SocialProof";
+import PainSection from "@/components/PainSection";
+import Investment from "@/components/Investment";
+import Authority from "@/components/Authority";
 import Audience from "@/components/Audience";
-import Timeline30Days from "@/components/Timeline30Days";
-import Deliverables from "@/components/Deliverables";
 import Method from "@/components/Method";
-import FAQ from "@/components/FAQ";
-import AcquisitionSection from "@/components/AcquisitionSection";
-import MartechSection from "@/components/Martech";
 import DiferenciaisSection from "@/components/DiferenciaisSection";
+import Testimonial from "@/components/Testimonial";
 import NossoEcossistema from "@/components/NossoEcossistema";
+import ConnectionSection from "@/components/ConnectionSection";
+import StrategicDiagnosis from "@/components/StrategicDiagnosis";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="bg-white">
       <Hero />
-      <StrategicMap />
+      <SocialProof />
+      <PainSection />
+      <Investment />
+      <Authority />
       <Audience />
-      <Timeline30Days />
-      <Deliverables />
-      <FAQ />
       <Method />
-      <MartechSection />
-      <AcquisitionSection />
       <DiferenciaisSection />
+      <Testimonial />
       <NossoEcossistema />
+      <ConnectionSection />
+      <StrategicDiagnosis />
+      <FinalCTA />
       <Footer />
     </main>
   );

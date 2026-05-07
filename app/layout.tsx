@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Meme Serviços | Landing Page",
-  description: "Mapa Estratégico de Marketing para crescer com estratégia e previsibilidade.",
+  description:
+    "Time de marketing completo com estratégia, execução e performance integradas para gerar demanda e organizar o funil.",
 };
 
 export default function RootLayout({

@@ -15,16 +15,16 @@ const ecossistemaItems = [
 
 export default function NossoEcossistema() {
   return (
-    <section className="flex w-full justify-center overflow-hidden bg-white py-24 font-sans">
+    <section className="flex w-full justify-center overflow-hidden bg-white py-20 font-sans md:py-24">
       <div className="flex w-full max-w-[1320px] flex-col items-start justify-between gap-12 px-6 lg:flex-row lg:items-center lg:px-8">
         <FadeIn delay={0.2}>
-          <div className="flex max-w-[500px] shrink-0 flex-col">
-            <h2 className="mb-[25px] text-[65px] font-bold leading-[82px] tracking-[-0.02em] text-[#000000]">
+          <div className="flex max-w-[520px] shrink-0 flex-col">
+            <h2 className="mb-[25px] text-[48px] font-bold leading-tight tracking-[-0.02em] text-[#000000] md:text-[65px]">
               Nosso <br /> Ecossistema
             </h2>
-            <p className="max-w-[330px] text-[22px] font-normal leading-[30px] text-[#8F8FA3]">
-              A Meme Digital é uma agência Martech com abordagem integrada, squads e soluções sob
-              medida.
+            <p className="max-w-[460px] text-[21px] font-normal leading-[30px] text-[#8F8FA3]">
+              A Meme Digital atua como uma agência Martech com estrutura integrada e squads
+              especializados, organizados conforme a necessidade de cada operação.
             </p>
           </div>
         </FadeIn>
@@ -55,10 +55,17 @@ export default function NossoEcossistema() {
         </div>
 
         <FadeIn delay={0.4} direction="left">
-          <div className="flex h-[238px] w-full max-w-[513px] shrink-0 items-center justify-center bg-[#6C5CE7] p-8">
-            <p className="max-w-[376px] text-[22px] font-normal leading-[30px] text-[#FFFFFF]">
-              Criamos soluções completas em design, desenvolvimento web, branding e performance para
-              alcançar resultados excepcionais.
+          <div className="flex w-full max-w-[513px] shrink-0 flex-col justify-center bg-[#6C5CE7] p-8 text-white">
+            <h3 className="text-[30px] font-bold leading-tight">
+              Estrutura completa para sustentar crescimento
+            </h3>
+            <p className="mt-5 text-[19px] font-normal leading-[29px]">
+              Squads conectando estratégia, criação, performance e tecnologia em uma rotina contínua
+              de execução e otimização.
+            </p>
+            <p className="mt-4 text-[19px] font-normal leading-[29px]">
+              Desenvolvemos soluções em design, desenvolvimento web, branding e aquisição para
+              apoiar o crescimento com consistência.
             </p>
           </div>
         </FadeIn>

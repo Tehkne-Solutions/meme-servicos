@@ -55,13 +55,15 @@ export default function Investment() {
         <FadeIn delay={0.35} className="lg:col-span-2">
           <div className="w-full border-4 border-[#1D1D1D] p-7 md:p-9">
             <h3 className="mb-8 text-[28px] font-bold text-[#1D1D1D]">Como definimos:</h3>
-            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <div className="grid gap-x-10 gap-y-6 md:grid-cols-2">
               {criteria.map((item) => (
                 <div key={item} className="flex items-start gap-4">
                   <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center bg-[#80D509] font-bold text-white">
                     ✓
                   </span>
-                  <p className="text-[17px] leading-relaxed text-[#4D4D4D]">{item}</p>
+                  <p className="text-[17px] leading-relaxed text-[#4D4D4D] md:max-w-[460px]">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>

@@ -15,18 +15,18 @@ export default function Hero() {
                 alt="Meme Digital Logo"
                 className="mb-8 h-12 w-auto"
               />
-              <h1 className="text-[42px] font-bold leading-[1.05] tracking-tight sm:text-[50px] lg:text-[58px]">
+              <h1 className="text-[38px] font-bold leading-[1.08] tracking-tight sm:text-[48px] lg:text-[54px]">
                 <span className="block text-[#6C5CE7]">
-                  Tenha um time de
+                  Tenha um time de marketing
                 </span>
                 <span className="block text-[#6C5CE7]">
-                  marketing completo
+                  completo sem montar
                 </span>
                 <span className="mt-3 block text-[#4D4D4D]">
-                  sem montar uma equipe
+                  uma equipe interna
                 </span>
                 <span className="block text-[#4D4D4D]">
-                  interna do zero
+                  do zero
                 </span>
               </h1>
               <p className="mt-8 text-[24px] leading-[34px] text-[#4D4D4D] md:text-[30px] md:leading-[40px]">

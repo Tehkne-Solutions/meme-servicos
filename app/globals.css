@@ -77,6 +77,15 @@ select {
   100% { transform: translateX(150%) skewX(-25deg); }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .btn-premium {
   position: relative;
   overflow: hidden;
@@ -97,8 +106,7 @@ select {
   background: linear-gradient(
     to right,
     transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
+    rgba(255, 255, 255, 0.4)
   );
   transform: translateX(-150%) skewX(-25deg);
 }

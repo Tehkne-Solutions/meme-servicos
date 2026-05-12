@@ -11,7 +11,7 @@ export default function Hero() {
           <FadeIn delay={0.1}>
             <div className="max-w-[620px] text-left font-jakarta">
               <img
-                src="/images/meme-digital-logo.png"
+                src="/images/meme-digital-logo.svg"
                 alt="Meme Digital Logo"
                 className="mb-8 h-12 w-auto"
               />
@@ -37,7 +37,7 @@ export default function Hero() {
           <FadeIn delay={0.3} direction="left">
             <div className="flex justify-center lg:justify-end">
               <div className="w-full max-w-[614px] rounded-none bg-[#6C5CE7] p-8 sm:p-10">
-                <LeadCaptureForm variant="hero" submitLabel="Quero estruturar meu marketing agora" />
+                <LeadCaptureForm variant="hero" submitLabel="Quero estruturar meu marketing" />
               </div>
             </div>
           </FadeIn>

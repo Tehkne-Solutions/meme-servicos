@@ -7,77 +7,50 @@ import { FadeIn } from "./MotionWrapper";
 const pillars = [
   {
     title: "Atração",
-    intro: "Você começa a aparecer para as pessoas certas:",
-    items: [
-      "Planejamento e personas",
-      "Conteúdo e SEO para demanda real",
-      "Tráfego pago com criativos e testes",
-      "Landing pages pensadas para conversão",
-    ],
+    description:
+      "Atrair o público-alvo com planejamento estratégico, branding, campanhas de marketing, landing pages otimizadas por produto, conteúdo atraente, tráfego pago, SEO e anúncios criativos.",
   },
   {
     title: "Engajamento",
-    intro: "A pessoa entende, confia e avança com menos dúvida:",
-    items: [
-      "UX/UI para reduzir fricção",
-      "Copywriting e mensagens para páginas e campanhas",
-      "Criativos e identidade visual com consistência",
-      "Conteúdo que sustenta decisão, não só alcance",
-    ],
+    description:
+      "Envolver o público oferecendo conteúdo valioso, construindo confiança por meio de landing pages otimizadas (UX), copywriting persuasivo e tornando a marca uma referência apaixonante para o cliente.",
   },
   {
     title: "Venda",
-    intro: "O comercial recebe melhor e responde melhor:",
-    items: [
-      "CRM e automações de nutrição",
-      "Fluxos, alertas e cadências de follow-up",
-      "Dashboards e relatórios para decisões",
-      "Ajustes contínuos com base no funil",
-    ],
+    description:
+      "Converter engajamento em vendas com estratégias eficazes de tráfego pago, landing pages, CRM, automação de marketing e integração com o time comercial para abordagens personalizadas.",
   },
   {
     title: "Fidelização",
-    intro: "A experiência continua depois da primeira conversão:",
-    items: [
-      "Fluxos de relacionamento pós-venda",
-      "Comunicação segmentada por perfil e estágio",
-      "Conteúdos para retenção e expansão de conta",
-      "Acompanhamento de satisfação e oportunidades",
-    ],
+    description:
+      "Construir relacionamentos sólidos por meio de automação de e-mail marketing, pós-venda atencioso, integração com a equipe comercial e campanhas exclusivas para clientes recorrentes.",
   },
   {
     title: "Indicação",
-    intro: "Clientes satisfeitos viram canais de crescimento:",
-    items: [
-      "Estratégias para estimular recomendações",
-      "Campanhas de indicação e prova social",
-      "Ativos para depoimentos, cases e validação",
-      "Mapeamento de promotores da marca",
-    ],
+    description:
+      "Incentivar clientes a recomendarem a marca por meio de depoimentos, avaliações no Google e ações digitais que aumentem a confiança e a reputação da empresa.",
   },
   {
     title: "Análise de Dados",
-    intro: "As decisões deixam de depender de achismo:",
-    items: [
-      "Dashboards de funil e performance",
-      "Leitura de canais, campanhas e conversões",
-      "Identificação de gargalos e oportunidades",
-      "Ajustes orientados por métricas de negócio",
-    ],
+    description:
+      "Monitorar resultados e performance, adotar novas tecnologias e ajustar estratégias com base em insights obtidos por dashboards e relatórios detalhados.",
   },
   {
     title: "Recorrência",
-    intro: "A operação ganha ritmo para crescer com consistência:",
-    items: [
-      "Rotina mensal de acompanhamento e otimização",
-      "Priorização contínua das frentes de marketing",
-      "Relatórios executivos com próximos passos",
-      "Evolução do funil com foco em previsibilidade",
-    ],
+    description:
+      "Garantir a retenção e fidelização do cliente com o uso de CRM, automações para estimular compras recorrentes e estratégias para assegurar uma experiência satisfatória e contínua.",
   },
 ];
 
-const funnel = ["Atração", "Engajamento", "Conversão", "Vendas"];
+const cycle = [
+  "Atração",
+  "Engajamento",
+  "Venda",
+  "Fidelização",
+  "Indicação",
+  "Análise de Dados",
+  "Recorrência",
+];
 
 export default function Method() {
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -118,14 +91,13 @@ export default function Method() {
             </h2>
 
             <p className="text-[22px] leading-relaxed text-[#1D1D1D]/80">
-              Uma operação completa para atrair, converter e vender, com as frentes trabalhando no
-              mesmo plano.
+              Atrair os clientes certos, aumentar o reconhecimento da marca e vender muito mais!
             </p>
           </div>
 
           <div className="mt-6 w-full border-l-4 border-[#FF1E5B] bg-white p-5 md:p-7">
             <p className="max-w-[900px] text-[24px] font-bold leading-snug text-[#1D1D1D]">
-              "O objetivo final é gerar demanda qualificada e impacto real no faturamento."
+              Agora é apenas uma questão de repetir esse ciclo de forma contínua e consistente.
             </p>
           </div>
         </FadeIn>
@@ -164,7 +136,7 @@ export default function Method() {
             {pillars.map((pillar, index) => (
               <motion.article
                 key={pillar.title}
-                className="group flex min-h-[560px] min-w-full snap-start flex-col bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:bg-[#FF1E5B] hover:text-white hover:shadow-2xl sm:min-w-[calc(50%-16px)] lg:min-w-[calc((100%-64px)/3)]"
+                className="group flex min-h-[500px] min-w-full snap-start flex-col bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:bg-[#FF1E5B] hover:text-white hover:shadow-2xl sm:min-w-[calc(50%-16px)] lg:min-w-[calc((100%-64px)/3)]"
                 initial={{ opacity: 0, y: 32 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
@@ -183,16 +155,8 @@ export default function Method() {
                 </h3>
 
                 <p className="mt-4 text-[18px] font-semibold leading-relaxed">
-                  {pillar.intro}
+                  {pillar.description}
                 </p>
-
-                <ul className="mt-6 space-y-3">
-                  {pillar.items.map((item) => (
-                    <li key={item} className="text-[17px] leading-relaxed">
-                      - {item}
-                    </li>
-                  ))}
-                </ul>
               </motion.article>
             ))}
           </div>
@@ -217,44 +181,29 @@ export default function Method() {
         <FadeIn delay={0.45}>
           <div className="mt-12 bg-[#6767F1] p-7 text-white md:p-9">
             <h3 className="mb-6 text-[28px] font-bold">
-              Como isso aparece no funil
+              Como o ciclo MEME7 se conecta
             </h3>
 
-            <div className="grid gap-4 md:grid-cols-4">
-              {funnel.map((step, index) => (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-7">
+              {cycle.map((step, index) => (
                 <motion.div
                   key={step}
-                  className="group flex items-center gap-4"
+                  className="group relative flex min-h-[88px] items-center justify-center border-2 border-white px-4 text-center text-[17px] font-bold transition-colors duration-300 group-hover:bg-white group-hover:text-[#6767F1]"
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{
                     duration: 0.55,
-                    delay: 0.08 * index,
+                    delay: 0.06 * index,
                     ease: [0.21, 0.47, 0.32, 0.98],
                   }}
                 >
-                  <motion.div
-                    className="flex min-h-[88px] flex-1 items-center justify-center border-2 border-white px-4 text-center text-[20px] font-bold transition-colors duration-300 group-hover:bg-white group-hover:text-[#6767F1]"
-                    whileHover={{ y: -6, scale: 1.03 }}
-                    transition={{ type: "spring", stiffness: 320, damping: 18 }}
-                  >
-                    {step}
-                  </motion.div>
+                  {step}
 
-                  {index < funnel.length - 1 && (
-                    <motion.span
-                      className="hidden text-[30px] font-bold md:block"
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{
-                        duration: 1.6,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: index * 0.15,
-                      }}
-                    >
+                  {index < cycle.length - 1 && (
+                    <span className="pointer-events-none absolute -right-4 top-1/2 z-10 hidden -translate-y-1/2 text-[24px] font-bold text-white lg:block">
                       →
-                    </motion.span>
+                    </span>
                   )}
                 </motion.div>
               ))}
